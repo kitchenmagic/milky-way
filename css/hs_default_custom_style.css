@@ -1,3 +1,34 @@
+/* 
+ *============================================================================================================================
+ *||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ *============================================================================================================================
+ *
+ * HubSpot Stylesheet
+ * 
+ * Company: Kitchen Magic
+ * Author: Josh Mamroud
+ * Email: josh.mamroud@kitchenmagic.com
+ * Created Date: 9/28/2015
+ *
+ *============================================================================================================================
+ *||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ *============================================================================================================================
+ */
+/*
+ *
+ *
+ *============================================================================================================================
+ *||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ *============================================================================================================================
+ * 
+ * FOUNDATION
+ *
+ *============================================================================================================================
+ *||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ *============================================================================================================================
+ *
+ *
+ */
 /* line 364, ../bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.5.2/";
@@ -9454,7 +9485,27 @@ th.hide-for-touch {
     display: none !important;
   }
 }
-/* line 1, ../scss/layout/_header.scss */
+/*
+ *
+ *
+ *============================================================================================================================
+ *||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ *============================================================================================================================
+ * 
+ * KITCHEN MAGIC
+ *
+ *============================================================================================================================
+ *||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ *============================================================================================================================
+ *
+ *
+ */
+/* 
+ *----------------------------------------------------------------------------------------------------------------------------
+ * HEADER
+ *----------------------------------------------------------------------------------------------------------------------------
+ */
+/* line 7, ../scss/layout/_header.scss */
 .km-header {
   background-color: #85695b;
   background-image: url("http://kitchenmagic.wpengine.com/wp-content/themes/kitchen-magic/images/textures/inflicted.png");
@@ -9464,18 +9515,18 @@ th.hide-for-touch {
   position: relative;
 }
 @media only screen and (min-width: 48.0625em) {
-  /* line 1, ../scss/layout/_header.scss */
+  /* line 7, ../scss/layout/_header.scss */
   .km-header {
     -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), inset 0 -1px 1px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), inset 0 -1px 1px rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), inset 0 -1px 1px rgba(0, 0, 0, 0.2);
   }
 }
-/* line 15, ../scss/layout/_header.scss */
+/* line 21, ../scss/layout/_header.scss */
 .km-header .km-header-inner {
   max-width: 71.25rem;
 }
-/* line 19, ../scss/layout/_header.scss */
+/* line 25, ../scss/layout/_header.scss */
 .km-header .km-header-inner .km-logo {
   background: #FFFFFF;
   text-align: center;
@@ -9483,7 +9534,7 @@ th.hide-for-touch {
   border-top: 0;
 }
 @media only screen and (min-width: 48.0625em) {
-  /* line 19, ../scss/layout/_header.scss */
+  /* line 25, ../scss/layout/_header.scss */
   .km-header .km-header-inner .km-logo {
     -moz-border-radius: 0 0 3px 3px;
     -webkit-border-radius: 0;
@@ -9497,37 +9548,37 @@ th.hide-for-touch {
     top: 80px;
   }
 }
-/* line 34, ../scss/layout/_header.scss */
+/* line 40, ../scss/layout/_header.scss */
 .km-header .km-header-inner .km-logo img {
   width: auto !important;
 }
-/* line 39, ../scss/layout/_header.scss */
+/* line 45, ../scss/layout/_header.scss */
 .km-header .km-header-inner .km-header-info {
   margin-top: 8px;
   color: #c9b8b0;
 }
-/* line 43, ../scss/layout/_header.scss */
+/* line 49, ../scss/layout/_header.scss */
 .km-header .km-header-inner .km-header-info strong {
   color: #FFFFFF;
   text-shadow: 0 1px 1px #58453c;
   font-size: 1.4em;
   font-weight: normal;
 }
-/* line 51, ../scss/layout/_header.scss */
+/* line 57, ../scss/layout/_header.scss */
 .km-header .km-header-inner .km-search {
   margin-top: 13px;
 }
-/* line 57, ../scss/layout/_header.scss */
+/* line 63, ../scss/layout/_header.scss */
 .km-header input[type="text"], .km-header input[type="password"], .km-header input[type="date"], .km-header input[type="datetime"], .km-header input[type="datetime-local"], .km-header input[type="month"], .km-header input[type="week"], .km-header input[type="email"], .km-header input[type="number"], .km-header input[type="search"], .km-header input[type="tel"], .km-header input[type="time"], .km-header input[type="url"], .km-header input[type="color"], .km-header textarea {
   border-color: #70584c;
 }
 
-/* line 63, ../scss/layout/_header.scss */
+/* line 69, ../scss/layout/_header.scss */
 .km-banner {
   height: 180px;
   width: 100%;
 }
-/* line 67, ../scss/layout/_header.scss */
+/* line 73, ../scss/layout/_header.scss */
 .km-banner .km-banner-image {
   background-size: 100%;
   background-repeat: no-repeat;
@@ -9535,25 +9586,40 @@ th.hide-for-touch {
   height: 100%;
 }
 
-/* line 1, ../scss/module/_navigation.scss */
+/* 
+ *----------------------------------------------------------------------------------------------------------------------------
+ * FOOTER
+ *----------------------------------------------------------------------------------------------------------------------------
+ */
+/* 
+ *----------------------------------------------------------------------------------------------------------------------------
+ * SIDEBAR
+ *----------------------------------------------------------------------------------------------------------------------------
+ */
+/* 
+ *----------------------------------------------------------------------------------------------------------------------------
+ * NAVIGATION
+ *----------------------------------------------------------------------------------------------------------------------------
+ */
+/* line 7, ../scss/module/_navigation.scss */
 .km-nav-primary {
   position: relative;
   background-color: #85695b;
   text-align: center;
 }
-/* line 6, ../scss/module/_navigation.scss */
+/* line 12, ../scss/module/_navigation.scss */
 .km-nav-primary .row, .km-nav-primary .columns {
   position: initial;
 }
-/* line 11, ../scss/module/_navigation.scss */
+/* line 17, ../scss/module/_navigation.scss */
 .km-nav-primary ul {
   list-style-type: none;
 }
-/* line 14, ../scss/module/_navigation.scss */
+/* line 20, ../scss/module/_navigation.scss */
 .km-nav-primary ul li {
   display: inline-block;
 }
-/* line 18, ../scss/module/_navigation.scss */
+/* line 24, ../scss/module/_navigation.scss */
 .km-nav-primary ul li a,
 .km-nav-primary ul li a:hover,
 .km-nav-primary ul li a:visited,
@@ -9564,7 +9630,7 @@ th.hide-for-touch {
   height: 100%;
   display: inline-block;
 }
-/* line 43, ../scss/module/_navigation.scss */
+/* line 49, ../scss/module/_navigation.scss */
 .km-nav-primary .hs-menu-wrapper > ul > li {
   vertical-align: top;
   line-height: 60px;
@@ -9572,34 +9638,34 @@ th.hide-for-touch {
   margin: 0 7.4%;
 }
 @media only screen and (min-width: 48.0625em) {
-  /* line 49, ../scss/module/_navigation.scss */
-  .km-nav-primary .hs-menu-wrapper > ul > li > a:hover, .km-nav-primary .hs-menu-wrapper > ul > li .sub-menu:hover + a {
+  /* line 55, ../scss/module/_navigation.scss */
+  .km-nav-primary .hs-menu-wrapper > ul > li > a:hover, .km-nav-primary .hs-menu-wrapper > ul > li .hs-menu-children-wrapper:hover + a {
     border-bottom: 4px white solid;
   }
 }
-/* line 53, ../scss/module/_navigation.scss */
+/* line 59, ../scss/module/_navigation.scss */
 .km-nav-primary .hs-menu-wrapper > ul > li > a:hover + .sub-menu,
-.km-nav-primary .hs-menu-wrapper > ul > li .sub-menu:hover {
+.km-nav-primary .hs-menu-wrapper > ul > li .hs-menu-children-wrapper:hover {
   visibility: visible;
   transition-delay: 0s;
   max-height: 300px;
   padding-bottom: 0.5em;
 }
-/* line 62, ../scss/module/_navigation.scss */
+/* line 68, ../scss/module/_navigation.scss */
 .km-nav-primary .hs-menu-wrapper > ul > li:first-child {
   margin-left: 0;
 }
-/* line 66, ../scss/module/_navigation.scss */
+/* line 72, ../scss/module/_navigation.scss */
 .km-nav-primary .hs-menu-wrapper > ul > li:last-child {
   margin-right: 0;
 }
 @media only screen and (min-width: 48.0625em) {
-  /* line 70, ../scss/module/_navigation.scss */
+  /* line 76, ../scss/module/_navigation.scss */
   .km-nav-primary .hs-menu-wrapper > ul > li.current-menu-item > a {
     border-bottom: 4px white solid;
   }
 }
-/* line 78, ../scss/module/_navigation.scss */
+/* line 84, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper {
   padding: 0 calc(50% - 555px);
   width: 100%;
@@ -9619,7 +9685,7 @@ th.hide-for-touch {
   display: block;
   visibility: hidden;
 }
-/* line 100, ../scss/module/_navigation.scss */
+/* line 106, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper li {
   transition: background-color 0.3s ease-in-out;
   display: inline-block;
@@ -9628,7 +9694,7 @@ th.hide-for-touch {
   font-size: 100%;
   text-align: left;
 }
-/* line 109, ../scss/module/_navigation.scss */
+/* line 115, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper li a::before {
   color: #8FB1EA;
   padding-right: 0.5em;
@@ -9640,31 +9706,36 @@ th.hide-for-touch {
   height: 18px;
   font-size: 18px;
 }
-/* line 122, ../scss/module/_navigation.scss */
+/* line 128, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper li:hover a {
   color: #323232;
 }
-/* line 127, ../scss/module/_navigation.scss */
+/* line 133, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper li a {
   transition: color 0.4s ease-in-out;
   width: 100%;
   padding: 8px 4px 8px 8px;
 }
-/* line 134, ../scss/module/_navigation.scss */
+/* line 140, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper li:last-child {
   border-bottom: none;
 }
 
-/* line 5, ../scss/module/_form.scss */
+/* 
+ *----------------------------------------------------------------------------------------------------------------------------
+ * FORM
+ *----------------------------------------------------------------------------------------------------------------------------
+ */
+/* line 11, ../scss/module/_form.scss */
 .km-postfix-button, .km-header .km-header-inner .km-search {
   position: relative;
 }
-/* line 8, ../scss/module/_form.scss */
+/* line 14, ../scss/module/_form.scss */
 .km-postfix-button .hs-input, .km-header .km-header-inner .km-search .hs-input {
   position: absolute;
   padding-right: 30%;
 }
-/* line 13, ../scss/module/_form.scss */
+/* line 19, ../scss/module/_form.scss */
 .km-postfix-button .hs-button, .km-header .km-header-inner .km-search .hs-button {
   font-size: 0.875rem;
   position: absolute;
@@ -9678,7 +9749,19 @@ th.hide-for-touch {
   border-radius: 0 3px 3px 0;
 }
 
-/* line 1, ../scss/module/_button.scss */
+/* line 31, ../scss/module/_form.scss */
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* 
+ *----------------------------------------------------------------------------------------------------------------------------
+ * BUTTON
+ *----------------------------------------------------------------------------------------------------------------------------
+ */
+/* line 7, ../scss/module/_button.scss */
 button, .hs-button,
 .button,
 .km-button,
@@ -9689,7 +9772,7 @@ input[type="submit"] {
   border-radius: 3px;
 }
 
-/* line 23, ../scss/module/_button.scss */
+/* line 29, ../scss/module/_button.scss */
 .km-child-btn-primary button, .km-child-btn-primary .hs-button,
 .km-child-btn-primary .button,
 .km-child-btn-primary .km-button:hover,
@@ -9699,7 +9782,7 @@ input[type="submit"] {
   border-color: #5e2f14;
 }
 
-/* line 32, ../scss/module/_button.scss */
+/* line 38, ../scss/module/_button.scss */
 .km-child-btn-primary button:hover, .km-child-btn-primary .hs-button:hover,
 .km-child-btn-primary .button:hover,
 .km-child-btn-primary .km-button:hover,
@@ -9709,7 +9792,7 @@ input[type="submit"] {
   border-color: #492410;
 }
 
-/* line 23, ../scss/module/_button.scss */
+/* line 29, ../scss/module/_button.scss */
 .km-child-btn-secondary button, .km-child-btn-secondary .hs-button,
 .km-child-btn-secondary .button,
 .km-child-btn-secondary .km-button:hover,
@@ -9719,7 +9802,7 @@ input[type="submit"] {
   border-color: #675146;
 }
 
-/* line 32, ../scss/module/_button.scss */
+/* line 38, ../scss/module/_button.scss */
 .km-child-btn-secondary button:hover, .km-child-btn-secondary .hs-button:hover,
 .km-child-btn-secondary .button:hover,
 .km-child-btn-secondary .km-button:hover,
@@ -9729,7 +9812,7 @@ input[type="submit"] {
   border-color: #58453c;
 }
 
-/* line 23, ../scss/module/_button.scss */
+/* line 29, ../scss/module/_button.scss */
 .km-child-btn-tertiary button, .km-child-btn-tertiary .hs-button,
 .km-child-btn-tertiary .button,
 .km-child-btn-tertiary .km-button:hover,
@@ -9739,7 +9822,7 @@ input[type="submit"] {
   border-color: #a08273;
 }
 
-/* line 32, ../scss/module/_button.scss */
+/* line 38, ../scss/module/_button.scss */
 .km-child-btn-tertiary button:hover, .km-child-btn-tertiary .hs-button:hover,
 .km-child-btn-tertiary .button:hover,
 .km-child-btn-tertiary .km-button:hover,
@@ -9749,7 +9832,7 @@ input[type="submit"] {
   border-color: #947565;
 }
 
-/* line 23, ../scss/module/_button.scss */
+/* line 29, ../scss/module/_button.scss */
 .km-child-btn-alert button, .km-child-btn-alert .hs-button,
 .km-child-btn-alert .button,
 .km-child-btn-alert .km-button:hover,
@@ -9759,7 +9842,7 @@ input[type="submit"] {
   border-color: #b70021;
 }
 
-/* line 32, ../scss/module/_button.scss */
+/* line 38, ../scss/module/_button.scss */
 .km-child-btn-alert button:hover, .km-child-btn-alert .hs-button:hover,
 .km-child-btn-alert .button:hover,
 .km-child-btn-alert .km-button:hover,
@@ -9769,7 +9852,7 @@ input[type="submit"] {
   border-color: #9e001c;
 }
 
-/* line 23, ../scss/module/_button.scss */
+/* line 29, ../scss/module/_button.scss */
 .km-child-btn-success button, .km-child-btn-success .hs-button,
 .km-child-btn-success .button,
 .km-child-btn-success .km-button:hover,
@@ -9779,7 +9862,7 @@ input[type="submit"] {
   border-color: #526903;
 }
 
-/* line 32, ../scss/module/_button.scss */
+/* line 38, ../scss/module/_button.scss */
 .km-child-btn-success button:hover, .km-child-btn-success .hs-button:hover,
 .km-child-btn-success .button:hover,
 .km-child-btn-success .km-button:hover,
@@ -9789,7 +9872,7 @@ input[type="submit"] {
   border-color: #3f5003;
 }
 
-/* line 23, ../scss/module/_button.scss */
+/* line 29, ../scss/module/_button.scss */
 .km-child-btn-warning button, .km-child-btn-warning .hs-button,
 .km-child-btn-warning .button,
 .km-child-btn-warning .km-button:hover,
@@ -9799,7 +9882,7 @@ input[type="submit"] {
   border-color: #ea7407;
 }
 
-/* line 32, ../scss/module/_button.scss */
+/* line 38, ../scss/module/_button.scss */
 .km-child-btn-warning button:hover, .km-child-btn-warning .hs-button:hover,
 .km-child-btn-warning .button:hover,
 .km-child-btn-warning .km-button:hover,
@@ -9809,7 +9892,7 @@ input[type="submit"] {
   border-color: #d26806;
 }
 
-/* line 23, ../scss/module/_button.scss */
+/* line 29, ../scss/module/_button.scss */
 .km-child-btn-info button, .km-child-btn-info .hs-button,
 .km-child-btn-info .button,
 .km-child-btn-info .km-button:hover,
@@ -9819,7 +9902,7 @@ input[type="submit"] {
   border-color: #2f6ad1;
 }
 
-/* line 32, ../scss/module/_button.scss */
+/* line 38, ../scss/module/_button.scss */
 .km-child-btn-info button:hover, .km-child-btn-info .hs-button:hover,
 .km-child-btn-info .button:hover,
 .km-child-btn-info .km-button:hover,
