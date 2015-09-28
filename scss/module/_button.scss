@@ -4,12 +4,16 @@
  *----------------------------------------------------------------------------------------------------------------------------
  */
 
+
 button,
 .button,
-.km-button,
 input[type="button"],
 input[type="submit"] {
 	@include border-radius($button-radius);
+}
+
+.km-button{
+	@extend button;
 }
 
 .hs-button{
@@ -17,30 +21,31 @@ input[type="submit"] {
 }
 
 .widget-type-google-search{
-
 	.hs-button{
 
 	}
 }
 
 
-
 @each $name, $value in $colors {
+	.km-btn-#{$name},
 	.km-child-btn-#{$name} button,
 	.km-child-btn-#{$name} .button,
 	.km-child-btn-#{$name} .km-button:hover,
 	.km-child-btn-#{$name} input[type='button'],
 	.km-child-btn-#{$name} input[type='submit'] {
 		background-color: $value;
-		border-color: darken($value, 10);
+		border-color: darken($value, 7);
 	}
 
+	.km-btn-#{$name}:hover,
 	.km-child-btn-#{$name} button:hover,
 	.km-child-btn-#{$name} .button:hover,
 	.km-child-btn-#{$name} .km-button:hover,
 	.km-child-btn-#{$name} input[type='button']:hover,
 	.km-child-btn-#{$name} input[type='submit']:hover {
-		background-color: darken($value, 5);
-		border-color: darken($value, 15);
+		background-color: darken($value, 7);
+		border-color: darken($value, 14);
 	}
 }
+
