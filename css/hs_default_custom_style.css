@@ -9726,16 +9726,16 @@ th.hide-for-touch {
  * FORM
  *----------------------------------------------------------------------------------------------------------------------------
  */
-/* line 11, ../scss/module/_form.scss */
+/* line 14, ../scss/module/_form.scss */
 .km-postfix-button, .km-header .km-header-inner .km-search {
   position: relative;
 }
-/* line 14, ../scss/module/_form.scss */
+/* line 17, ../scss/module/_form.scss */
 .km-postfix-button .hs-input, .km-header .km-header-inner .km-search .hs-input {
   position: absolute;
   padding-right: 30%;
 }
-/* line 19, ../scss/module/_form.scss */
+/* line 22, ../scss/module/_form.scss */
 .km-postfix-button .hs-button, .km-header .km-header-inner .km-search .hs-button {
   font-size: 0.875rem;
   position: absolute;
@@ -9749,7 +9749,7 @@ th.hide-for-touch {
   border-radius: 0 3px 3px 0;
 }
 
-/* line 31, ../scss/module/_form.scss */
+/* line 34, ../scss/module/_form.scss */
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
