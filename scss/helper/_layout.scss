@@ -1,0 +1,31 @@
+.km-row {
+	margin: 0 auto!important;
+	max-width: $row-width;
+	width: 100%;
+	float:none!important;
+}
+
+.km-row-wide {
+	@extend .km-row;
+	max-width: $row-width-wide;
+}
+
+.km-row-full {
+	@extend .km-row;
+	max-width: 100%!important;
+}
+
+.km-row,
+.km-row-wide,
+.km-row-full {
+	.row-fluid{
+		@extend .km-row;
+	}
+}
+
+.align-center {
+	float: none!important;
+	display:block!important;
+	margin-left: auto!important;
+	margin-right: auto!important;
+}

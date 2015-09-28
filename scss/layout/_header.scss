@@ -1,0 +1,73 @@
+.km-header{
+	background:{
+		color: $header-color;
+		image: $grain;
+	}
+	width: 100%;
+	display:block;
+	z-index: 1000;
+	position: relative;
+
+	@media #{$medium-up}{
+		@include box-shadow( 0 1px 1px rgba(0,0,0, .5), inset 0 -1px 1px rgba(0,0,0, 0.2) );
+	}
+
+	.km-header-inner{
+		max-width: $row-width;
+		@extend .km-row;
+
+		.km-logo{
+			background: $white;
+			text-align: center;
+			padding: 10px;
+			border-top: 0;		
+
+			@media #{$medium-up} {
+				@include border-radius(0 0 $global-radius $global-radius);
+				@include box-shadow( 0 1px 10px 0 rgba(0,0,0,.5) );
+				border: solid 1px #C5C5C5;
+				margin-top: -80px;
+				position: relative;
+				top: 80px;
+			}
+
+			img{
+				width:auto!important;
+			}
+		}
+
+		.km-header-info{
+			margin-top: 8px;
+			color: lighten($header-color,30);
+
+			strong{
+				color: $white;
+				@include text-shadow(0 1px 1px darken($header-color,15) );
+				font-size: 1.4em;
+				font-weight: normal;
+			}
+		}
+
+		.km-search{
+			margin-top: 13px;
+			@extend .km-postfix-button;
+		}
+	}
+
+	#{text-inputs(all, 'input')}{
+		border-color: darken($header-color,7);
+	}
+
+}
+
+.km-banner{
+	height: 180px;
+	width: 100%;
+
+	.km-banner-image {
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		height: 100%;
+	}
+}

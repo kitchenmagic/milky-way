@@ -1,0 +1,24 @@
+.widget-type-google-search{
+
+}
+
+.km-postfix-button { 
+	position:relative;
+
+	.hs-input {
+		position:absolute;
+		padding-right: 30%;
+	}
+
+	.hs-button {
+		font-size: $input-font-size;
+		position: absolute;
+		right: 0;
+		padding: ($form-spacing / 2) 1em;
+		height: ($input-font-size + ($form-spacing * 1.5) - rem-calc(1));
+		white-space: nowrap;
+		border-left-width:0;
+		@include border-radius( 0 $global-radius $global-radius 0);
+	}
+}
+
