@@ -16,7 +16,9 @@
 	z-index: 1000;
 	position: relative;
 
+
 	@media #{$medium-up}{
+		padding: 10px;
 		@include raised;
 	}
 
@@ -28,15 +30,16 @@
 			background: $white;
 			text-align: center;
 			padding: 10px;
-			border-top: 0;		
+				
 
 			@media #{$medium-up} {
 				@include border-radius(0 0 $global-radius $global-radius);
 				@include box-shadow( 0 1px 10px 0 rgba(0,0,0,.5) );
 				border: solid 1px #C5C5C5;
+				border-top: 0;
 				margin-top: -80px;
 				position: relative;
-				top: 80px;
+				top: 70px;
 			}
 
 			img{

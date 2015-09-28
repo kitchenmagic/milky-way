@@ -14,6 +14,7 @@
  *||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
  *============================================================================================================================
  */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
 /*
  *
  *
@@ -9532,24 +9533,24 @@ th.hide-for-touch {
 @media only screen and (min-width: 48.0625em) {
   /* line 7, ../scss/layout/_header.scss */
   .km-header {
+    padding: 10px;
     -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), inset 0 -1px 1px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), inset 0 -1px 1px rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), inset 0 -1px 1px rgba(0, 0, 0, 0.2);
   }
 }
-/* line 23, ../scss/layout/_header.scss */
+/* line 25, ../scss/layout/_header.scss */
 .km-header .km-header-inner {
   max-width: 71.25rem;
 }
-/* line 27, ../scss/layout/_header.scss */
+/* line 29, ../scss/layout/_header.scss */
 .km-header .km-header-inner .km-logo {
   background: #FFFFFF;
   text-align: center;
   padding: 10px;
-  border-top: 0;
 }
 @media only screen and (min-width: 48.0625em) {
-  /* line 27, ../scss/layout/_header.scss */
+  /* line 29, ../scss/layout/_header.scss */
   .km-header .km-header-inner .km-logo {
     -moz-border-radius: 0 0 3px 3px;
     -webkit-border-radius: 0;
@@ -9558,42 +9559,43 @@ th.hide-for-touch {
     -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.5);
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.5);
     border: solid 1px #C5C5C5;
+    border-top: 0;
     margin-top: -80px;
     position: relative;
-    top: 80px;
+    top: 70px;
   }
 }
-/* line 42, ../scss/layout/_header.scss */
+/* line 45, ../scss/layout/_header.scss */
 .km-header .km-header-inner .km-logo img {
   width: auto !important;
 }
-/* line 47, ../scss/layout/_header.scss */
+/* line 50, ../scss/layout/_header.scss */
 .km-header .km-header-inner .km-header-info {
   margin-top: 8px;
   color: #c9b8b0;
 }
-/* line 51, ../scss/layout/_header.scss */
+/* line 54, ../scss/layout/_header.scss */
 .km-header .km-header-inner .km-header-info strong {
   color: #FFFFFF;
   text-shadow: 0 1px 1px #58453c;
   font-size: 1.4em;
   font-weight: normal;
 }
-/* line 59, ../scss/layout/_header.scss */
+/* line 62, ../scss/layout/_header.scss */
 .km-header .km-header-inner .km-search {
   margin-top: 13px;
 }
-/* line 65, ../scss/layout/_header.scss */
+/* line 68, ../scss/layout/_header.scss */
 .km-header input[type="text"], .km-header input[type="password"], .km-header input[type="date"], .km-header input[type="datetime"], .km-header input[type="datetime-local"], .km-header input[type="month"], .km-header input[type="week"], .km-header input[type="email"], .km-header input[type="number"], .km-header input[type="search"], .km-header input[type="tel"], .km-header input[type="time"], .km-header input[type="url"], .km-header input[type="color"], .km-header textarea {
   border-color: #70584c;
 }
 
-/* line 71, ../scss/layout/_header.scss */
+/* line 74, ../scss/layout/_header.scss */
 .km-banner {
   height: 180px;
   width: 100%;
 }
-/* line 75, ../scss/layout/_header.scss */
+/* line 78, ../scss/layout/_header.scss */
 .km-banner .km-banner-image {
   background-size: 100%;
   background-repeat: no-repeat;
@@ -9749,20 +9751,27 @@ th.hide-for-touch {
  * FORM
  *----------------------------------------------------------------------------------------------------------------------------
  */
-/* Test */
-/* line 14, ../scss/module/_form.scss */
+/* line 9, ../scss/module/_form.scss */
 .km-postfix-button, .km-header .km-header-inner .km-search {
   position: relative;
 }
-/* line 17, ../scss/module/_form.scss */
+/* line 12, ../scss/module/_form.scss */
 .km-postfix-button .hs-input, .km-header .km-header-inner .km-search .hs-input {
   position: absolute;
   padding-right: 30%;
 }
-/* line 22, ../scss/module/_form.scss */
-.km-postfix-button .hs-button, .km-header .km-header-inner .km-search .hs-button {
+/* line 17, ../scss/module/_form.scss */
+.km-postfix-button .hs-button, .km-header .km-header-inner .km-search .hs-button,
+.km-postfix-button button,
+.km-header .km-header-inner .km-search button,
+.km-postfix-button .km-button,
+.km-header .km-header-inner .km-search .km-button,
+.km-postfix-button .hs-button,
+.km-header .km-header-inner .km-search .hs-button,
+.km-postfix-button .km-button,
+.km-header .km-header-inner .km-search .km-button {
   font-size: 0.875rem;
-  position: absolute;
+  float: right;
   right: 0;
   padding: 0.5rem 1em;
   height: 2.3125rem;
@@ -9772,8 +9781,12 @@ th.hide-for-touch {
   -webkit-border-radius: 0;
   border-radius: 0 3px 3px 0;
 }
+/* line 30, ../scss/module/_form.scss */
+.km-postfix-button .hs-error-msgs, .km-header .km-header-inner .km-search .hs-error-msgs {
+  display: none !important;
+}
 
-/* line 34, ../scss/module/_form.scss */
+/* line 35, ../scss/module/_form.scss */
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
