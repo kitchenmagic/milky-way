@@ -9597,7 +9597,7 @@ th.hide-for-touch {
 }
 /* line 78, ../scss/layout/_header.scss */
 .km-banner .km-banner-image {
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 0;
   height: 100%;
@@ -9654,43 +9654,51 @@ th.hide-for-touch {
   text-decoration: none;
   height: 100%;
   display: inline-block;
+  width: 100%;
+  max-width: 100%;
 }
-/* line 51, ../scss/module/_navigation.scss */
+/* line 50, ../scss/module/_navigation.scss */
+.km-nav-primary .hs-menu-wrapper > ul {
+  overflow: hidden;
+}
+/* line 54, ../scss/module/_navigation.scss */
 .km-nav-primary .hs-menu-wrapper > ul > li {
   vertical-align: top;
   line-height: 60px;
   height: 60px;
-  margin: 0 7.4%;
+  margin: 0;
+  width: 20%;
+  float: left;
 }
 @media only screen and (min-width: 48.0625em) {
-  /* line 57, ../scss/module/_navigation.scss */
+  /* line 62, ../scss/module/_navigation.scss */
   .km-nav-primary .hs-menu-wrapper > ul > li > a:hover, .km-nav-primary .hs-menu-wrapper > ul > li .hs-menu-children-wrapper:hover + a {
     border-bottom: 4px white solid;
   }
 }
-/* line 61, ../scss/module/_navigation.scss */
-.km-nav-primary .hs-menu-wrapper > ul > li > a:hover + .sub-menu,
+/* line 66, ../scss/module/_navigation.scss */
+.km-nav-primary .hs-menu-wrapper > ul > li > a:hover + .hs-menu-children-wrapper,
 .km-nav-primary .hs-menu-wrapper > ul > li .hs-menu-children-wrapper:hover {
   visibility: visible;
   transition-delay: 0s;
   max-height: 300px;
   padding-bottom: 0.5em;
 }
-/* line 70, ../scss/module/_navigation.scss */
+/* line 75, ../scss/module/_navigation.scss */
 .km-nav-primary .hs-menu-wrapper > ul > li:first-child {
   margin-left: 0;
 }
-/* line 74, ../scss/module/_navigation.scss */
+/* line 79, ../scss/module/_navigation.scss */
 .km-nav-primary .hs-menu-wrapper > ul > li:last-child {
   margin-right: 0;
 }
 @media only screen and (min-width: 48.0625em) {
-  /* line 78, ../scss/module/_navigation.scss */
+  /* line 83, ../scss/module/_navigation.scss */
   .km-nav-primary .hs-menu-wrapper > ul > li.current-menu-item > a {
     border-bottom: 4px white solid;
   }
 }
-/* line 86, ../scss/module/_navigation.scss */
+/* line 91, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper {
   padding: 0 calc(50% - 555px);
   width: 100%;
@@ -9710,7 +9718,7 @@ th.hide-for-touch {
   display: block;
   visibility: hidden;
 }
-/* line 108, ../scss/module/_navigation.scss */
+/* line 113, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper li {
   transition: background-color 0.3s ease-in-out;
   display: inline-block;
@@ -9719,7 +9727,7 @@ th.hide-for-touch {
   font-size: 100%;
   text-align: left;
 }
-/* line 117, ../scss/module/_navigation.scss */
+/* line 122, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper li a::before {
   color: #8FB1EA;
   padding-right: 0.5em;
@@ -9731,17 +9739,17 @@ th.hide-for-touch {
   height: 18px;
   font-size: 18px;
 }
-/* line 130, ../scss/module/_navigation.scss */
+/* line 135, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper li:hover a {
   color: #323232;
 }
-/* line 135, ../scss/module/_navigation.scss */
+/* line 140, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper li a {
   transition: color 0.4s ease-in-out;
   width: 100%;
   padding: 8px 4px 8px 8px;
 }
-/* line 142, ../scss/module/_navigation.scss */
+/* line 147, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper li:last-child {
   border-bottom: none;
 }
@@ -10021,6 +10029,21 @@ blockquote {
   display: block !important;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+/* line 33, ../scss/helper/_layout.scss */
+.km-bg-pos-top {
+  background-position: top !important;
+}
+
+/* line 37, ../scss/helper/_layout.scss */
+.km-bg-pos-center {
+  background-position: center !important;
+}
+
+/* line 41, ../scss/helper/_layout.scss */
+.km-bg-pos-bottom {
+  background-position: bottom !important;
 }
 
 /* line 2, ../scss/helper/_color.scss */
