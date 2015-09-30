@@ -1,0 +1,34 @@
+.km-icons-social{
+
+	& > a {
+		@include border-radius($button-radius);
+		color: white;
+		float: left;
+		font-size: 25px;
+		margin: 0 5% 0 0;
+		padding: .5em 0;
+		text-align: center;
+		width: 15%;
+	}
+
+	.fa-facebook {
+		background-color:#3b5998;
+	}
+
+	.fa-pinterest-p,
+	.fa-pinterest {
+		background-color:#c92228;
+	}
+
+	.fa-rss {
+		background-color: #f90;
+	}
+
+	.fa-google-plus {
+		background-color:#d34836;
+	}
+	
+	.fa-youtube {
+		background-color:#cd201f;
+	}
+}

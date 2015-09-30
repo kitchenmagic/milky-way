@@ -35,3 +35,27 @@
 #{text-inputs(all, 'input')} {
 	@include border-radius($input-border-radius);
 }
+
+.hs-form {
+
+	.hs-input{
+
+		&.error{
+			border: solid 1px $alert-color;
+			margin: 0 0 1rem 0;
+		}
+	}
+
+	fieldset.form-columns-1{
+	
+		 input.hs-input{
+			width:100%;
+		}
+
+	}
+
+	.hs-error-msgs {
+		display:none!important;
+	}
+
+}

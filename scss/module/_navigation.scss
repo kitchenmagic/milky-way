@@ -6,9 +6,9 @@
 
 .km-nav-primary {
 	position: relative;
-	background-color:$secondary-color;
-	text-align:center;
-
+	background-color: $secondary-color;
+	text-align: center;
+	font-size: 16px;
 	@include raised;
 
 	.row, .columns {
@@ -38,18 +38,13 @@
 		}
 	}
 
-	@mixin highlighted-item() {
-		// color: color(off-white);
-
-		@media #{$medium-up} {
-			border-bottom: 4px white solid;
-		}
-	}
 
 	// For just first-level navigation
 	.hs-menu-wrapper > ul {
-		@extend .km-row;
 		overflow: hidden;
+		padding: 0 calc( 50% - 555px);
+		margin: 0;
+		z-index: 5;
 
 		& > li {
 			vertical-align: top;
@@ -68,7 +63,6 @@
 				visibility: visible;
 				transition-delay: 0s;
 				max-height: 300px;
-				padding-bottom: 0.5em;
 			}
 		}
 
@@ -87,61 +81,43 @@
 		
 	}
 
-	// For sub menus
+	// Child Menus
 	ul.hs-menu-children-wrapper {
-		padding: 0 calc(50% - 555px);
-		width: 100%;
-
-		background-color: #5989DB;
-
-		overflow: hidden;
-		position: absolute;
-		left: 0;
-		right: 0;
-		margin-left: auto;
-		margin-right: auto;
-		top: 100%;
-		transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out, visibility 0s linear 0.5s;
-		z-index: 2;
-		font-size: 0;
-		text-align: left;
-
-		max-height: 0;
+		@include transition(max-height 0.5s ease-in-out, padding 0.3s ease-in-out, visibility 0.5s linear 0s );
+		background-color: $info-color;
 		display: block;
+		left: 0;
+		margin: 0;
+		max-height: 0;
+		overflow: hidden;
+		padding: 0 calc( 50% - 555px);/*ssss*/
+		position: absolute;
+		right: 0;
+		top: 100%;
 		visibility: hidden;
+		width: 100%;
+		z-index: 2;
 
 		li {
-			transition: background-color 0.3s ease-in-out;
+			@include transition( background-color 0.3s ease-in-out);
 			display: inline-block;
-			width: 25%;
 			margin: 0;
-			font-size: 100%;
-
-			text-align: left;
-
-			a::before {
-				color: #8FB1EA;
-				padding-right: 0.5em;
-				vertical-align: center;
-				display: inline-block;
-				font-family: "FontAwesome";
-				content: "\f138";
-				width: 18px;
-				height: 18px;
-				font-size: 18px;
-			}
-
+			width: 20%;
+			float: left;
+			text-align: center;
+			
 			&:hover {
 				a {
-					color: #323232;
+					@include transition( background-color 0.3s ease-in-out);
+					background-color: lighten( $info-color, 5 );
 				}
 			}
 
 			a {
-				transition: color 0.4s ease-in-out;
 				width: 100%;
-				padding: 8px 4px 8px 8px;
+				padding: .75em;
 			}
+			
 		}
 
 		li:last-child {
