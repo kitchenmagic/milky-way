@@ -1,0 +1,14 @@
+blockquote{
+	border:none;
+	text-align:center;
+
+	cite{
+		text-align: right;
+		padding: 1em 0;
+
+		&:before { 
+			content: "\2014 \0020";
+			padding-right: .5em;
+		}
+	}
+}

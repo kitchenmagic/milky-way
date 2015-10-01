@@ -1,1 +1,13 @@
-.body_container-wrapper{}
+.body-container {
+	margin-top: $global-spacing;
+
+	& > .row-fluid-wrapper{
+
+		& > .row-fluid {
+			& > .widget-span {
+				@extend .km-row;
+				padding: 0 16px $global-spacing;
+			}
+		}
+	}
+}

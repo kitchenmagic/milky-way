@@ -83,7 +83,6 @@ $include-html-grid-classes: $include-html-classes;
 $include-xl-html-grid-classes: false;
 
 $row-width: rem-calc(1140);
-$row-width-wide: rem-calc(1340);
 $total-columns: 12;
 $column-gutter: rem-calc(30); 
 
@@ -463,9 +462,9 @@ $include-html-button-classes: $include-html-classes;
 
 // We use these to build padding for buttons.
 $button-tny: rem-calc(10);
-$button-sml: rem-calc(14);
-$button-med: rem-calc(16);
-$button-lrg: rem-calc(18);
+$button-sml: rem-calc(12);
+$button-med: rem-calc(14);
+$button-lrg: rem-calc(16);
 
 // We use this to control the display property.
 $button-display: inline-block;
@@ -1516,3 +1515,25 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%);
 // -- Kitchen Magic Settings
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 $header-color: $secondary-color;
+$footer-color: $tertiary-color;
+
+//Layout
+$width-tenth: 10%;
+$width-tenth-2: 20%;
+$width-tenth-3: 30%;
+$width-tenth-4: 40%;
+$width-tenth-6: 60%;
+$width-tenth-7: 70%;
+$width-tenth-8: 80%;
+$width-tenth-9: 90%;
+$width-quarter: 25%;
+$width-quarter-3: 75%;
+$width-half: 50%;
+$width-full: 100%;
+
+//Grids
+$row-width-wide: rem-calc(1340);
+$row-width-full: $width-full;
+$row-width-narrow: rem-calc(960);
+
+$global-spacing: 35px;

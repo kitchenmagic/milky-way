@@ -54,7 +54,8 @@
 			width: col(5);
 			float: left;
 
-			& > a:hover, .hs-menu-children-wrapper:hover + a {
+			& > a:hover, 
+			& > .hs-menu-children-wrapper:hover + a {
 				@include highlighted-item();
 			}
 
@@ -66,6 +67,12 @@
 			}
 		}
 
+		& > li.hs-item-has-children > a:after {
+			content: '\f107';
+			font-family: 'FontAwesome';
+			padding-left: 10px;
+		}
+		
 		& > li:first-child {
 			margin-left: 0;
 		}

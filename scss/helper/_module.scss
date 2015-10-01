@@ -1,0 +1,21 @@
+
+
+/*
+ *-------------------------------------------------------
+ * FORM
+ *-------------------------------------------------------
+ */
+
+.km-form-input-large {
+	input,
+	button,
+	.km-button {
+		padding: $button-med;
+		height:auto;
+	}
+}
+
+.km-form-hide-title .form-title,
+.km-form-hide-label label {
+	display:none!important;
+}

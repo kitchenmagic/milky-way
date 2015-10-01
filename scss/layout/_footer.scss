@@ -4,6 +4,37 @@
  *----------------------------------------------------------------------------------------------------------------------------
  */
 
- .km-legal{
- 	text-align: center;
+
+
+ .km-footer {
+ 	background-color: $footer-color; 
+ 	color: lighten($tertiary-color, 15);
+ 	
+ 	& > .row-fluid-wrapper {
+		padding-bottom: $global-spacing;
+ 	}
+
+ 	blockquote{
+ 		color: darken($tertiary-color, 35);
+ 		cite{
+ 			color: darken($tertiary-color, 15);
+ 		}
+ 	}
+
+ 	.km-service-area {
+ 		color: darken($tertiary-color, 35);
+ 		border: solid 1px darken($tertiary-color, 8);
+ 		border-right: none;
+ 		border-left: none;
+ 		padding: .8em;
+ 		text-align: center;
+ 		margin-bottom: $global-spacing;
+
+ 	}
+	
+	.km-legal{
+		text-align: center;
+	}
+
  }
+

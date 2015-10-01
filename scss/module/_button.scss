@@ -4,20 +4,13 @@
  *----------------------------------------------------------------------------------------------------------------------------
  */
 
-
-button,
+.km-button,
+.hs-button,
 .button,
+button,
 input[type="button"],
 input[type="submit"] {
-	@include border-radius($button-radius);
-}
-
-.km-button{
-	@extend button;
-}
-
-.hs-button{
-	@extend button;
+	@include button($button-sml, $primary-color, true);
 }
 
 .widget-type-google-search{
@@ -34,6 +27,7 @@ input[type="submit"] {
 	.km-child-btn-#{$name} .km-button:hover,
 	.km-child-btn-#{$name} input[type='button'],
 	.km-child-btn-#{$name} input[type='submit'] {
+		@extend .km-button;
 		background-color: $value;
 		border-color: darken($value, 7);
 	}
