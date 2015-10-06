@@ -1,10 +1,52 @@
 /* 
  *----------------------------------------------------------------------------------------------------------------------------
- * FORM
+ * MODULE > FORM
  *----------------------------------------------------------------------------------------------------------------------------
  */
 
 .widget-type-google-search{}
+
+
+
+
+#{text-inputs(all, 'input')} {
+	@include border-radius($input-border-radius);
+}
+
+.hs-form,
+form {
+
+	.hs-input,
+	.input{
+
+		&.error{
+			border: solid 1px $alert-color;
+			margin: 0 0 1rem 0;
+		}
+		
+		input {
+			height: auto;
+			padding: $button-sml 1em;
+			display:mamroud;
+		}
+	}
+	
+	fieldset.form-columns-1{
+	
+		 input.hs-input{
+			width:100%;
+		}
+
+	}
+
+	.hs-error-msgs {
+		display:none!important;
+	}
+
+}
+
+
+
 
 .km-postfix-button { 
 	position:relative;
@@ -20,7 +62,7 @@
 		font-size: $input-font-size;
 		float: right;
 		right: 0;
-		padding: ($form-spacing / 2) 1em;
+		//padding: ($form-spacing / 2) 1em;
 		//height: ($input-font-size + ($form-spacing * 1.5) - rem-calc(1));
 		white-space: nowrap;
 		border-left-width:0;
@@ -30,33 +72,4 @@
 	.hs-error-msgs {
 		display: none!important;
 	}
-}
-
-
-#{text-inputs(all, 'input')} {
-	@include border-radius($input-border-radius);
-}
-
-.hs-form {
-
-	.hs-input{
-
-		&.error{
-			border: solid 1px $alert-color;
-			margin: 0 0 1rem 0;
-		}
-	}
-
-	fieldset.form-columns-1{
-	
-		 input.hs-input{
-			width:100%;
-		}
-
-	}
-
-	.hs-error-msgs {
-		display:none!important;
-	}
-
 }

@@ -1,24 +1,14 @@
 /* 
  *----------------------------------------------------------------------------------------------------------------------------
- * LAYOUT > BODY
+ * LAYOUT > PAGE
  *----------------------------------------------------------------------------------------------------------------------------
  */
-.body-container {
-	margin-top: $global-spacing;
-	
 
-	.widget-span {
-		margin-bottom: $global-spacing;
-	}
+ //Home Page
+ .km-page-home {
 
-	& > .row-fluid-wrapper{
-
-		& > .row-fluid {
-			
-			& > .widget-span {
-				//@extend .km-row;
-				padding: 0 16px;
-			}
-		}
-	}
-}
+ 	.km-featured-slider { 
+		max-height: 480px;
+		overflow: hidden;
+ 	}
+ }

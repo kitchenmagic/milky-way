@@ -29,6 +29,24 @@
 }
 
 
+
+//Icon
+@mixin icon($icon-name, $position){
+	font-family: $font-awesome;
+	content: unquote("\"\\#{$icon-name}\"");
+	float: $position;
+
+	@if $position == right {
+		padding-left: $icon-padding;	
+	} @else if $position == left {
+		padding-right: $icon-padding;
+	} @else {
+		padding: 0;
+	}
+}
+
+
+
  /* 
  *----------------------------------------------------------
  * Functions

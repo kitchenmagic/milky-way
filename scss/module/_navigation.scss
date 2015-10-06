@@ -1,9 +1,212 @@
 /* 
  *----------------------------------------------------------------------------------------------------------------------------
- * NAVIGATION
+ * MODULE > NAVIGATION
  *----------------------------------------------------------------------------------------------------------------------------
  */
 
+
+//All Menus
+.hs-menu-wrapper {
+	
+
+	//All Menus
+	ul {
+		background-color: rgba(0,0,0,.3);
+		list-style: none;
+		margin:0!important;
+		padding:0!important;
+
+		li {
+			margin:0;
+			padding:0;
+
+			a {
+				background-color: $info-color;
+				padding: 0.2rem 2rem .2rem 1rem;
+				width: 100%;
+				display: block;
+			}
+
+			&.hs-item-has-children { }
+		}
+	}
+	
+	& > ul {
+		position: relative;
+		float: left;
+
+		& > li {
+			
+			& > a {
+
+			}
+		}
+	}
+
+	.hs-item-has-children {
+		position: relative;
+		
+		.hs-menu-children-wrapper {
+				width: 100%;
+				position: absolute;
+				z-index: 3;
+		}
+	}
+}
+
+
+
+
+
+
+
+//Horizontal Menu
+.hs-menu-flow-horizontal {
+
+	//All Menu Lists
+	ul {
+		
+		//All Menu Items
+		li {
+			
+		}
+	}
+	
+
+
+	//Top Level Menu List
+	& > ul {
+		width: 100%;
+
+		& > li {
+			width: auto;
+			padding: 0 10px;
+			float: left;
+
+			ul {
+				top:0;
+			}
+		}
+	}
+
+	&.flyouts {
+		.hs-item-has-children > a:after {
+			@include icon($fa-chevron-down, right);
+		}
+	}
+}
+
+
+
+
+
+
+
+//Vertical Menu
+.hs-menu-flow-vertical {
+
+	//All Menu Lists
+	ul {
+		
+		//All Menu Items
+		li {
+			
+		}
+	}
+	
+	//Top Level Menu List
+	& > ul {
+		
+
+		& > li {
+			
+			ul{
+				top: 0;
+				left: 100%;
+			}
+		}
+	}
+
+	
+	&.flyouts { 
+		.hs-item-has-children {
+			& > a:after {
+				@include icon($fa-angle-right, right);
+			}
+			
+			& > .hs-menu-children-wrapper {
+				max-width:0;
+			}	
+		}
+	}
+}
+
+
+
+
+
+
+
+
+.flyouts {
+
+	.hs-item-has-children {
+
+		.hs-menu-children-wrapper {
+			@include transition( max-height 0.5s ease-in-out, max-width 0.5s ease-in-out, padding 0.3s ease-in-out, visibility 0.0s linear .1s );
+			visibility: hidden;
+			max-height: 0;
+			max-width: 0;
+
+			& > li > a {
+				overflow: hidden;
+				white-space: nowrap;
+				padding:0;
+
+				&:after {
+					max-width: 0;
+					overflow: hidden;
+				}
+			}
+		}
+		
+		a:hover + .hs-menu-children-wrapper,
+		& > .hs-menu-children-wrapper:hover {
+			visibility:visible;
+			max-width: 100%;
+			max-height: 100%;
+			
+			& > li > a {
+				padding: 0.2rem 2rem .2rem 1rem;
+			}
+
+			a:after{
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+PRIMARY NAVIGATION
+*/
 .km-nav-primary {
 	position: relative;
 	background-color: $secondary-color;
@@ -21,7 +224,6 @@
 
 		li {
 			display: inline-block;
-			
 			
 			a,
 			a:hover,
@@ -93,17 +295,21 @@
 		@include transition(max-height 0.5s ease-in-out, padding 0.3s ease-in-out, visibility 0.5s linear 0s );
 		background-color: $info-color;
 		display: block;
-		left: 0;
+		
 		margin: 0;
 		max-height: 0;
 		overflow: hidden;
 		padding: 0 calc( 50% - 555px);/*ssss*/
-		position: absolute;
-		right: 0;
-		top: 100%;
 		visibility: hidden;
 		width: 100%;
 		z-index: 2;
+	
+		@media #{$medium-up} {
+			position: absolute;
+			right: 0;
+			left: 0;
+			top: 100%;
+		}
 
 		li {
 			@include transition( background-color 0.3s ease-in-out);
@@ -132,3 +338,7 @@
 		}
 	}
 }
+
+
+
+/* Mobile */

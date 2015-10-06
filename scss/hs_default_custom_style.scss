@@ -45,7 +45,7 @@
 	//@import "foundation/components/alert-boxes";
 	//@import "foundation/components/block-grid";
 	//@import "foundation/components/breadcrumbs";
-	//@import "foundation/components/button-groups";
+	@import "foundation/components/button-groups";
 	@import "foundation/components/buttons";
 	//@import "foundation/components/clearing";
 	//@import "foundation/components/dropdown";
@@ -102,6 +102,7 @@
 	@import "layout/footer";
 	@import "layout/sidebar";
 	@import "layout/body";
+	@import "layout/page";
 	@import "module/navigation";
 	@import "module/form";
 	@import "module/button";

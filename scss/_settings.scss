@@ -1,3 +1,4 @@
+
 // Foundation by ZURB
 // foundation.zurb.com
 // Licensed under MIT Open Source
@@ -1537,3 +1538,20 @@ $row-width-full: $width-full;
 $row-width-narrow: rem-calc(960);
 
 $global-spacing: 35px;
+
+//Icons
+$icon-padding: 1rem;
+
+$font-awesome: 'FontAwesome';
+
+$fa-chevron-up: f077;
+$fa-chevron-right: f054;
+$fa-chevron-down: f078;
+$fa-chevron-left: f053;
+
+$fa-angle-up: f106;
+$fa-angle-right: f105;
+$fa-angle-down: f107;
+$fa-angle-left: f104;
+
+$backslash: unescape-string("\\");

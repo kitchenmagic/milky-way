@@ -3,16 +3,22 @@
  * FOOTER
  *----------------------------------------------------------------------------------------------------------------------------
  */
-
-
-
  .km-footer {
  	background-color: $footer-color; 
  	color: lighten($tertiary-color, 15);
- 	
+ 	padding: $global-spacing*1.5 16px 0;
+
  	& > .row-fluid-wrapper {
-		padding-bottom: $global-spacing;
+
+ 		.widget-span{
+
+			.widget-span {
+				margin-bottom: $global-spacing;
+			}	
+		}
  	}
+	
+
 
  	blockquote{
  		color: darken($tertiary-color, 35);
@@ -28,12 +34,18 @@
  		border-left: none;
  		padding: .8em;
  		text-align: center;
- 		margin-bottom: $global-spacing;
-
  	}
 	
 	.km-legal{
 		text-align: center;
+	}
+	
+	
+	.km-button,
+	.hs-button,
+	.button,
+	button{ 
+		margin: 0;
 	}
 
  }
