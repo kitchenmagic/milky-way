@@ -4,6 +4,41 @@
  *----------------------------------------------------------------------------------------------------------------------------
  */
 
+%list-item-active {
+	background-color: rgba(0,0,0, .5);
+	border: solid 1px rgba(0,0,0,.8);
+	color:white;
+	padding: 0.4rem 2rem 0.4rem 1rem;
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+	visibility: visible;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+%list-item-inactive {
+	@include transition( max-height 0.5s ease-in-out, max-width 0.5s ease-in-out, padding 0.4s ease-in-out, visibility 0.5s linear 0s );
+	visibility: hidden;
+}
+
+%list-item-vertical-inactive {
+	@extend %list-item-inactive;
+	max-width: 0;
+	border-left: none;
+	border-right: none;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+%list-item-horizontal-inactive {
+	@extend %list-item-inactive;
+	max-height: 0;
+	border-top: none;
+	border-bottom: none;
+	padding-top: 0;
+	padding-bottom: 0;
+}
 
 //All Menus
 .hs-menu-wrapper {
@@ -11,90 +46,23 @@
 
 	//All Menus
 	ul {
-		background-color: rgba(0,0,0,.3);
 		list-style: none;
-		margin:0!important;
+		background: rgba(0,0,0,.2);
 		padding:0!important;
+		margin:0!important;
 
 		li {
-			margin:0;
-			padding:0;
+			padding:0!important;
+			margin:0!important;
 
 			a {
-				background-color: $info-color;
-				padding: 0.2rem 2rem .2rem 1rem;
-				width: 100%;
-				display: block;
+				@extend %list-item-active;
 			}
-
-			&.hs-item-has-children { }
-		}
-	}
-	
-	& > ul {
-		position: relative;
-		float: left;
-
-		& > li {
-			
-			& > a {
-
-			}
-		}
-	}
-
-	.hs-item-has-children {
-		position: relative;
-		
-		.hs-menu-children-wrapper {
-				width: 100%;
-				position: absolute;
-				z-index: 3;
 		}
 	}
 }
 
 
-
-
-
-
-
-//Horizontal Menu
-.hs-menu-flow-horizontal {
-
-	//All Menu Lists
-	ul {
-		
-		//All Menu Items
-		li {
-			
-		}
-	}
-	
-
-
-	//Top Level Menu List
-	& > ul {
-		width: 100%;
-
-		& > li {
-			width: auto;
-			padding: 0 10px;
-			float: left;
-
-			ul {
-				top:0;
-			}
-		}
-	}
-
-	&.flyouts {
-		.hs-item-has-children > a:after {
-			@include icon($fa-chevron-down, right);
-		}
-	}
-}
 
 
 
@@ -104,88 +72,153 @@
 
 //Vertical Menu
 .hs-menu-flow-vertical {
-
-	//All Menu Lists
-	ul {
-		
-		//All Menu Items
-		li {
-			
-		}
-	}
 	
-	//Top Level Menu List
+	//Top Level List
 	& > ul {
-		
-
-		& > li {
-			
-			ul{
-				top: 0;
-				left: 100%;
-			}
-		}
+		float:left;
 	}
 
+	&.flyouts {
 	
-	&.flyouts { 
+		//Parent Menu Items
 		.hs-item-has-children {
+			position: relative;
+
+			//Icons
 			& > a:after {
 				@include icon($fa-angle-right, right);
 			}
+
+			//Child Menu Containers
+			.hs-menu-children-wrapper {
+				position: absolute;
+				z-index: 3;
+				top: 0;
+				left: 100%;
+
+				& > li > a {
+					@extend %list-item-vertical-inactive;
+				}
+			}
 			
-			& > .hs-menu-children-wrapper {
-				max-width:0;
-			}	
-		}
-	}
-}
-
-
-
-
-
-
-
-
-.flyouts {
-
-	.hs-item-has-children {
-
-		.hs-menu-children-wrapper {
-			@include transition( max-height 0.5s ease-in-out, max-width 0.5s ease-in-out, padding 0.3s ease-in-out, visibility 0.0s linear .1s );
-			visibility: hidden;
-			max-height: 0;
-			max-width: 0;
-
-			& > li > a {
-				overflow: hidden;
-				white-space: nowrap;
-				padding:0;
-
-				&:after {
-					max-width: 0;
-					overflow: hidden;
+			//Hover States
+			a:hover + .hs-menu-children-wrapper,
+			& > .hs-menu-children-wrapper:hover {
+				
+				& > li > a {
+					@extend %list-item-active;
 				}
 			}
 		}
+	}
+}
+
+
+
+
+
+
+//Horizontal Menu
+.hs-menu-flow-horizontal {
+	position: relative;
+
+	//Top Level Menu List
+	& > ul {
+		width: 100%;
+		position: absolute;
+
+		& > li {
+			width: auto;
+		}
+	}
+	
+	&.flyouts {
 		
-		a:hover + .hs-menu-children-wrapper,
-		& > .hs-menu-children-wrapper:hover {
-			visibility:visible;
-			max-width: 100%;
-			max-height: 100%;
+		& > ul {
+
+			//Parent Menu Items
+			& > .hs-item-has-children {
+				float:left;
+
+				//Icons
+				& > a:after {
+					@include icon($fa-angle-down, right);
+				}
+
+				//Children Container
+				& > .hs-menu-children-wrapper {
+					position: relative;
+					
+					//Children
+					& > li > a {
+						@extend %list-item-horizontal-inactive;
+					}
+
+					//Grand Children Container
+					.hs-menu-children-wrapper {
+						position: absolute;
+						z-index: 3;
+						top: 0;
+						left: 100%;
+						
+
+						//Grandchildren
+						& > li > a {
+							@extend %list-item-vertical-inactive;
+						}
+					}
+					
+					//Grand Children Hover States
+					/*
+					a:hover + .hs-menu-children-wrapper,
+					.hs-menu-children-wrapper:hover {
+						
+						& > li > a {
+							@extend %list-item-active;
+						}
+					}
+					*/
+				}
+				
+				//Children Hover States
+				/*
+				a:hover + .hs-menu-children-wrapper,
+				.hs-menu-children-wrapper:hover {
+					li {
+						position: relative;
+					}
+
+					& > li > a {
+						@extend %list-item-active;
+					}
+				}*/
+			}
 			
-			& > li > a {
-				padding: 0.2rem 2rem .2rem 1rem;
+			//Children Hover States
+			a:hover + .hs-menu-children-wrapper,
+			.hs-menu-children-wrapper:hover {
+				li {
+					position: relative;
+				}
+
+				& > li > a {
+					@extend %list-item-active;
+				}
 			}
 
-			a:after{
-				max-width: 100%;
-			}
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

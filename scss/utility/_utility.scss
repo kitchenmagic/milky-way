@@ -34,7 +34,10 @@
 @mixin icon($icon-name, $position){
 	font-family: $font-awesome;
 	content: unquote("\"\\#{$icon-name}\"");
-	float: $position;
+	
+	@if $position !=  null{
+		position: absolute;
+	}
 
 	@if $position == right {
 		padding-left: $icon-padding;	
