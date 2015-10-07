@@ -9766,12 +9766,11 @@ blockquote cite:before {
  * MODULE > NAVIGATION
  *----------------------------------------------------------------------------------------------------------------------------
  */
-/* line 7, ../scss/module/_navigation.scss */
-.hs-menu-wrapper ul li a, .hs-menu-flow-vertical.flyouts .hs-item-has-children a:hover + .hs-menu-children-wrapper > li > a, .hs-menu-flow-vertical.flyouts .hs-item-has-children > .hs-menu-children-wrapper:hover > li > a, .hs-menu-flow-horizontal.flyouts > ul a:hover + .hs-menu-children-wrapper > li > a,
+/* line 9, ../scss/module/_navigation.scss */
+.hs-menu-wrapper ul li a, .hs-menu-flow-vertical.flyouts li.hs-item-has-children a:hover + .hs-menu-children-wrapper > li > a, .hs-menu-flow-vertical.flyouts li.hs-item-has-children > .hs-menu-children-wrapper:hover > li > a, .hs-menu-flow-horizontal.flyouts > ul a:hover + .hs-menu-children-wrapper > li > a,
 .hs-menu-flow-horizontal.flyouts > ul .hs-menu-children-wrapper:hover > li > a {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: solid 1px rgba(0, 0, 0, 0.8);
-  color: white;
+  background-color: #EEE;
+  border-bottom: solid 1px #DDD;
   padding: 0.4rem 2rem 0.4rem 1rem;
   max-width: 100%;
   max-height: 100%;
@@ -9781,8 +9780,8 @@ blockquote cite:before {
   white-space: nowrap;
 }
 
-/* line 20, ../scss/module/_navigation.scss */
-.hs-menu-flow-vertical.flyouts .hs-item-has-children .hs-menu-children-wrapper > li > a, .hs-menu-flow-horizontal.flyouts > ul > .hs-item-has-children > .hs-menu-children-wrapper .hs-menu-children-wrapper > li > a, .hs-menu-flow-horizontal.flyouts > ul > .hs-item-has-children > .hs-menu-children-wrapper > li > a {
+/* line 21, ../scss/module/_navigation.scss */
+.hs-menu-flow-vertical.flyouts li.hs-item-has-children ul.hs-menu-children-wrapper > li > a, .hs-menu-flow-horizontal.flyouts > ul > .hs-item-has-children > .hs-menu-children-wrapper .hs-menu-children-wrapper > li > a, .hs-menu-flow-horizontal.flyouts > ul > .hs-item-has-children > .hs-menu-children-wrapper > li > a {
   -moz-transition: max-height 0.5s ease-in-out, max-width 0.5s ease-in-out, padding 0.4s ease-in-out, visibility 0.5s linear 0s;
   -o-transition: max-height 0.5s ease-in-out, max-width 0.5s ease-in-out, padding 0.4s ease-in-out, visibility 0.5s linear 0s;
   -webkit-transition: max-height 0.5s ease-in-out, max-width 0.5s ease-in-out, padding 0.4s ease-in-out, visibility 0.5s linear;
@@ -9791,8 +9790,8 @@ blockquote cite:before {
   visibility: hidden;
 }
 
-/* line 25, ../scss/module/_navigation.scss */
-.hs-menu-flow-vertical.flyouts .hs-item-has-children .hs-menu-children-wrapper > li > a, .hs-menu-flow-horizontal.flyouts > ul > .hs-item-has-children > .hs-menu-children-wrapper .hs-menu-children-wrapper > li > a {
+/* line 26, ../scss/module/_navigation.scss */
+.hs-menu-flow-vertical.flyouts li.hs-item-has-children ul.hs-menu-children-wrapper > li > a, .hs-menu-flow-horizontal.flyouts > ul > .hs-item-has-children > .hs-menu-children-wrapper .hs-menu-children-wrapper > li > a {
   max-width: 0;
   border-left: none;
   border-right: none;
@@ -9800,7 +9799,7 @@ blockquote cite:before {
   padding-right: 0;
 }
 
-/* line 34, ../scss/module/_navigation.scss */
+/* line 35, ../scss/module/_navigation.scss */
 .hs-menu-flow-horizontal.flyouts > ul > .hs-item-has-children > .hs-menu-children-wrapper > li > a {
   max-height: 0;
   border-top: none;
@@ -9809,107 +9808,111 @@ blockquote cite:before {
   padding-bottom: 0;
 }
 
-/* line 48, ../scss/module/_navigation.scss */
+/* line 49, ../scss/module/_navigation.scss */
 .hs-menu-wrapper ul {
   list-style: none;
-  background: rgba(0, 0, 0, 0.2);
   padding: 0 !important;
   margin: 0 !important;
 }
 /* line 54, ../scss/module/_navigation.scss */
 .hs-menu-wrapper ul li {
+  position: relative;
   padding: 0 !important;
   margin: 0 !important;
 }
 
-/* line 77, ../scss/module/_navigation.scss */
+/* line 78, ../scss/module/_navigation.scss */
 .hs-menu-flow-vertical > ul {
   float: left;
 }
-/* line 84, ../scss/module/_navigation.scss */
-.hs-menu-flow-vertical.flyouts .hs-item-has-children {
+/* line 86, ../scss/module/_navigation.scss */
+.hs-menu-flow-vertical.flyouts ul > li:first-of-type > a,
+.hs-menu-flow-vertical.flyouts li.hs-item-has-children ul.hs-menu-children-wrapper > li:first-of-type a {
+  border-top: solid 1px #DDD;
+}
+/* line 96, ../scss/module/_navigation.scss */
+.hs-menu-flow-vertical.flyouts li.hs-item-has-children {
   position: relative;
 }
-/* line 88, ../scss/module/_navigation.scss */
-.hs-menu-flow-vertical.flyouts .hs-item-has-children > a:after {
+/* line 100, ../scss/module/_navigation.scss */
+.hs-menu-flow-vertical.flyouts li.hs-item-has-children > a:after {
   font-family: "FontAwesome";
   content: "\f105";
   position: absolute;
   padding-left: 1rem;
 }
-/* line 93, ../scss/module/_navigation.scss */
-.hs-menu-flow-vertical.flyouts .hs-item-has-children .hs-menu-children-wrapper {
+/* line 105, ../scss/module/_navigation.scss */
+.hs-menu-flow-vertical.flyouts li.hs-item-has-children ul.hs-menu-children-wrapper {
   position: absolute;
   z-index: 3;
   top: 0;
   left: 100%;
 }
 
-/* line 122, ../scss/module/_navigation.scss */
+/* line 138, ../scss/module/_navigation.scss */
 .hs-menu-flow-horizontal {
   position: relative;
 }
-/* line 126, ../scss/module/_navigation.scss */
+/* line 142, ../scss/module/_navigation.scss */
 .hs-menu-flow-horizontal > ul {
   width: 100%;
   position: absolute;
 }
-/* line 130, ../scss/module/_navigation.scss */
+/* line 146, ../scss/module/_navigation.scss */
 .hs-menu-flow-horizontal > ul > li {
   width: auto;
 }
-/* line 140, ../scss/module/_navigation.scss */
+/* line 156, ../scss/module/_navigation.scss */
 .hs-menu-flow-horizontal.flyouts > ul > .hs-item-has-children {
   float: left;
-  				/*
-  				a:hover + .hs-menu-children-wrapper,
-  				.hs-menu-children-wrapper:hover {
-  					li {
-  						position: relative;
-  					}
-  
-  					& > li > a {
-  						@extend %list-item-active;
-  					}
-  				}*/
 }
-/* line 144, ../scss/module/_navigation.scss */
+/* line 160, ../scss/module/_navigation.scss */
 .hs-menu-flow-horizontal.flyouts > ul > .hs-item-has-children > a:after {
   font-family: "FontAwesome";
   content: "\f107";
   position: absolute;
   padding-left: 1rem;
 }
-/* line 149, ../scss/module/_navigation.scss */
+/* line 165, ../scss/module/_navigation.scss */
 .hs-menu-flow-horizontal.flyouts > ul > .hs-item-has-children > .hs-menu-children-wrapper {
   position: relative;
-  /*
-  a:hover + .hs-menu-children-wrapper,
-  .hs-menu-children-wrapper:hover {
-  	
-  	& > li > a {
-  		@extend %list-item-active;
-  	}
-  }
-  */
 }
-/* line 158, ../scss/module/_navigation.scss */
+/* line 174, ../scss/module/_navigation.scss */
 .hs-menu-flow-horizontal.flyouts > ul > .hs-item-has-children > .hs-menu-children-wrapper .hs-menu-children-wrapper {
   position: absolute;
   z-index: 3;
   top: 0;
   left: 100%;
 }
-/* line 200, ../scss/module/_navigation.scss */
-.hs-menu-flow-horizontal.flyouts > ul a:hover + .hs-menu-children-wrapper li,
-.hs-menu-flow-horizontal.flyouts > ul .hs-menu-children-wrapper:hover li {
-  position: relative;
+
+/*
+//Children Hover States
+a:hover + .hs-menu-children-wrapper,
+.hs-menu-children-wrapper:hover {
+	li {
+		position: relative;
+	}
+
+	& > li > a {
+		@extend %list-item-active;
+	}
 }
 
+
+//Grand Children Hover States
+
+a:hover + .hs-menu-children-wrapper,
+.hs-menu-children-wrapper:hover {
+	
+	& > li > a {
+		@extend %list-item-active;
+	}
+}
+*/
 /*
 PRIMARY NAVIGATION
 */
-/* line 243, ../scss/module/_navigation.scss */
+/* line 250, ../scss/module/_navigation.scss */
 .km-nav-primary {
   position: relative;
   background-color: #85695b;
@@ -9919,19 +9922,19 @@ PRIMARY NAVIGATION
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), inset 0 -1px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), inset 0 -1px 1px rgba(0, 0, 0, 0.2);
 }
-/* line 250, ../scss/module/_navigation.scss */
+/* line 257, ../scss/module/_navigation.scss */
 .km-nav-primary .row, .km-nav-primary .columns {
   position: initial;
 }
-/* line 255, ../scss/module/_navigation.scss */
+/* line 262, ../scss/module/_navigation.scss */
 .km-nav-primary ul {
   list-style-type: none;
 }
-/* line 258, ../scss/module/_navigation.scss */
+/* line 265, ../scss/module/_navigation.scss */
 .km-nav-primary ul li {
   display: inline-block;
 }
-/* line 261, ../scss/module/_navigation.scss */
+/* line 268, ../scss/module/_navigation.scss */
 .km-nav-primary ul li a,
 .km-nav-primary ul li a:hover,
 .km-nav-primary ul li a:visited,
@@ -9944,14 +9947,14 @@ PRIMARY NAVIGATION
   width: 100%;
   max-width: 100%;
 }
-/* line 278, ../scss/module/_navigation.scss */
+/* line 285, ../scss/module/_navigation.scss */
 .km-nav-primary .hs-menu-wrapper > ul {
   overflow: hidden;
   padding: 0 calc( 50% - 555px);
   margin: 0;
   z-index: 5;
 }
-/* line 284, ../scss/module/_navigation.scss */
+/* line 291, ../scss/module/_navigation.scss */
 .km-nav-primary .hs-menu-wrapper > ul > li {
   vertical-align: top;
   line-height: 60px;
@@ -9961,7 +9964,7 @@ PRIMARY NAVIGATION
   float: left;
 }
 @media only screen and (min-width: 48.0625em) {
-  /* line 292, ../scss/module/_navigation.scss */
+  /* line 299, ../scss/module/_navigation.scss */
   .km-nav-primary .hs-menu-wrapper > ul > li > a:hover, .km-nav-primary .hs-menu-wrapper > ul > li > .hs-menu-children-wrapper:hover + a {
     border-bottom: 4px white solid;
     -moz-transition: border 0.3s ease-in-out;
@@ -9970,29 +9973,29 @@ PRIMARY NAVIGATION
     transition: border 0.3s ease-in-out;
   }
 }
-/* line 297, ../scss/module/_navigation.scss */
+/* line 304, ../scss/module/_navigation.scss */
 .km-nav-primary .hs-menu-wrapper > ul > li > a:hover + .hs-menu-children-wrapper,
 .km-nav-primary .hs-menu-wrapper > ul > li .hs-menu-children-wrapper:hover {
   visibility: visible;
   transition-delay: 0s;
   max-height: 300px;
 }
-/* line 305, ../scss/module/_navigation.scss */
+/* line 312, ../scss/module/_navigation.scss */
 .km-nav-primary .hs-menu-wrapper > ul > li.hs-item-has-children > a:after {
   content: '\f107';
   font-family: 'FontAwesome';
   padding-left: 10px;
 }
-/* line 311, ../scss/module/_navigation.scss */
+/* line 318, ../scss/module/_navigation.scss */
 .km-nav-primary .hs-menu-wrapper > ul > li:first-child {
   margin-left: 0;
 }
-/* line 315, ../scss/module/_navigation.scss */
+/* line 322, ../scss/module/_navigation.scss */
 .km-nav-primary .hs-menu-wrapper > ul > li:last-child {
   margin-right: 0;
 }
 @media only screen and (min-width: 48.0625em) {
-  /* line 319, ../scss/module/_navigation.scss */
+  /* line 326, ../scss/module/_navigation.scss */
   .km-nav-primary .hs-menu-wrapper > ul > li.current-menu-item > a {
     border-bottom: 4px white solid;
     -moz-transition: border 0.3s ease-in-out;
@@ -10001,7 +10004,7 @@ PRIMARY NAVIGATION
     transition: border 0.3s ease-in-out;
   }
 }
-/* line 327, ../scss/module/_navigation.scss */
+/* line 334, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper {
   -moz-transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out, visibility 0.5s linear 0s;
   -o-transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out, visibility 0.5s linear 0s;
@@ -10020,7 +10023,7 @@ PRIMARY NAVIGATION
   z-index: 2;
 }
 @media only screen and (min-width: 48.0625em) {
-  /* line 327, ../scss/module/_navigation.scss */
+  /* line 334, ../scss/module/_navigation.scss */
   .km-nav-primary ul.hs-menu-children-wrapper {
     position: absolute;
     right: 0;
@@ -10028,7 +10031,7 @@ PRIMARY NAVIGATION
     top: 100%;
   }
 }
-/* line 347, ../scss/module/_navigation.scss */
+/* line 354, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper li {
   -moz-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
@@ -10040,7 +10043,7 @@ PRIMARY NAVIGATION
   float: left;
   text-align: center;
 }
-/* line 356, ../scss/module/_navigation.scss */
+/* line 363, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper li:hover a {
   -moz-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
@@ -10048,12 +10051,12 @@ PRIMARY NAVIGATION
   transition: background-color 0.3s ease-in-out;
   background-color: #6e97df;
 }
-/* line 362, ../scss/module/_navigation.scss */
+/* line 369, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper li a {
   width: 100%;
   padding: .75em;
 }
-/* line 369, ../scss/module/_navigation.scss */
+/* line 376, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper li:last-child {
   border-bottom: none;
 }

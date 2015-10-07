@@ -4,9 +4,11 @@
  *----------------------------------------------------------------------------------------------------------------------------
  */
 
+
+
 %list-item-active {
-	background-color: #DDD;
-	border: solid 1px #CCC;
+	background-color: $list-background-color;
+	border-bottom: $list-border-style;
 	padding: 0.4rem 2rem 0.4rem 1rem;
 	max-width: 100%;
 	max-height: 100%;
@@ -46,11 +48,11 @@
 	//All Menus
 	ul {
 		list-style: none;
-		background: rgba(0,0,0,.2);
 		padding:0!important;
 		margin:0!important;
 
 		li {
+			position: relative;
 			padding:0!important;
 			margin:0!important;
 
@@ -78,9 +80,20 @@
 	}
 
 	&.flyouts {
-	
+		
+		& ul > li {
+
+			&:first-of-type > a,
+			%list-top {
+				border-top: $list-border-style;
+			}			
+		}
+
+		
+
+
 		//Parent Menu Items
-		.hs-item-has-children {
+		li.hs-item-has-children {
 			position: relative;
 
 			//Icons
@@ -89,7 +102,7 @@
 			}
 
 			//Child Menu Containers
-			.hs-menu-children-wrapper {
+			ul.hs-menu-children-wrapper {
 				position: absolute;
 				z-index: 3;
 				top: 0;
@@ -97,6 +110,10 @@
 
 				& > li > a {
 					@extend %list-item-vertical-inactive;
+				}
+
+				& > li:first-of-type a {
+					@extend %list-top;
 				}
 			}
 			
@@ -166,54 +183,45 @@
 							@extend %list-item-vertical-inactive;
 						}
 					}
-					
-					//Grand Children Hover States
-					/*
-					a:hover + .hs-menu-children-wrapper,
-					.hs-menu-children-wrapper:hover {
-						
-						& > li > a {
-							@extend %list-item-active;
-						}
-					}
-					*/
-				}
-				
-				//Children Hover States
-				/*
-				a:hover + .hs-menu-children-wrapper,
-				.hs-menu-children-wrapper:hover {
-					li {
-						position: relative;
-					}
-
-					& > li > a {
-						@extend %list-item-active;
-					}
-				}*/
+				}				
 			}
-			
+
 			//Children Hover States
 			a:hover + .hs-menu-children-wrapper,
 			.hs-menu-children-wrapper:hover {
-				li {
-					position: relative;
-				}
 
 				& > li > a {
 					@extend %list-item-active;
 				}
 			}
-
 		}
 	}
 }
 
+/*
+//Children Hover States
+a:hover + .hs-menu-children-wrapper,
+.hs-menu-children-wrapper:hover {
+	li {
+		position: relative;
+	}
+
+	& > li > a {
+		@extend %list-item-active;
+	}
+}
 
 
+//Grand Children Hover States
 
-
-
+a:hover + .hs-menu-children-wrapper,
+.hs-menu-children-wrapper:hover {
+	
+	& > li > a {
+		@extend %list-item-active;
+	}
+}
+*/
 
 
 
