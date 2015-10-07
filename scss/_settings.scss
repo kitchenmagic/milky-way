@@ -1538,6 +1538,9 @@ $row-width-full: $width-full;
 $row-width-narrow: rem-calc(960);
 
 $global-spacing: 35px;
+$global-spacing-bottom: 35px;
+$global-spacing-sides: 16px;
+
 
 //Icons
 $icon-padding: 1rem;
@@ -1554,6 +1557,12 @@ $fa-angle-right: f105;
 $fa-angle-down: f107;
 $fa-angle-left: f104;
 
+
+
+
+
+
+
 $backslash: unescape-string("\\");
 
 
@@ -1561,3 +1570,7 @@ $backslash: unescape-string("\\");
 //List
 $list-background-color: #EEE;
 $list-border-style: solid 1px #DDD;
+
+
+
+

@@ -5,15 +5,15 @@
  */
  .km-footer {
  	background-color: $footer-color; 
- 	color: lighten($tertiary-color, 15);
- 	padding: $global-spacing*1.5 16px 0;
+ 	color: lighten($tertiary-color, 15); 	
 
  	& > .row-fluid-wrapper {
 
  		.widget-span{
+			padding: 0 $global-spacing-sides;
 
 			.widget-span {
-				margin-bottom: $global-spacing;
+				margin-bottom: $global-spacing-bottom;
 			}	
 		}
  	}
@@ -38,6 +38,7 @@
 	
 	.km-legal{
 		text-align: center;
+		background-color: $secondary-color;
 	}
 	
 	

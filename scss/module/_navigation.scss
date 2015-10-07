@@ -41,31 +41,106 @@
 	padding-bottom: 0;
 }
 
+
+
+
+
 //All Menus
 .hs-menu-wrapper {
-	
-
 	//All Menus
 	ul {
+		
+		li {
+			
+		}
+	}
+
+	//All Flyout Menus 
+	&.flyouts ul {
 		list-style: none;
 		padding:0!important;
 		margin:0!important;
 
 		li {
-			position: relative;
+			position:relative;
 			padding:0!important;
 			margin:0!important;
 
-			a {
+			& > a {
 				@extend %list-item-active;
 			}
 		}
+
+		//All li with Children
+		.hs-item-has-children{
+			
+			//All Child Wrappers ul
+			.hs-menu-children-wrapper{
+
+			}
+		}
+
 	}
 }
 
 
 
 
+//Horizontal Menu
+.hs-menu-flow-horizontal {
+	position: relative;
+	z-index: 100;
+
+	//Horizontal Flyout Menu
+	&.flyouts > ul {
+		
+		//.hs-menu-flow-horizontal.flyouts > ul li
+		li {
+			float: left;
+			
+			ul.hs-menu-children-wrapper {
+				width: 100%;
+				position:absolute;
+				z-index: 3;
+
+				li {
+					width:100%;
+
+					a {
+						@extend %list-item-horizontal-inactive;
+					}
+
+					&.hs-item-has-children {
+
+						ul.hs-menu-children-wrapper {
+							top: 0;
+							left: 100%;
+						}
+
+						& > a:after {
+							@include icon($fa-angle-right, right);
+						}
+					}
+				}
+			}
+			
+			&.hs-item-has-children {
+				//Horizontal Items Hover States
+				a:hover + .hs-menu-children-wrapper,
+				.hs-menu-children-wrapper:hover {
+
+					& > li > a {
+						@extend %list-item-active;
+					}
+				}
+
+			 	& > a:after {
+					@include icon($fa-angle-down, right);
+				}
+			}	
+		}	
+	}
+}
 
 
 
@@ -88,9 +163,6 @@
 				border-top: $list-border-style;
 			}			
 		}
-
-		
-
 
 		//Parent Menu Items
 		li.hs-item-has-children {
@@ -132,96 +204,6 @@
 
 
 
-
-
-//Horizontal Menu
-.hs-menu-flow-horizontal {
-	position: relative;
-
-	//Top Level Menu List
-	& > ul {
-		width: 100%;
-		position: absolute;
-
-		& > li {
-			width: auto;
-		}
-	}
-	
-	&.flyouts {
-		
-		& > ul {
-
-			//Parent Menu Items
-			& > .hs-item-has-children {
-				float:left;
-
-				//Icons
-				& > a:after {
-					@include icon($fa-angle-down, right);
-				}
-
-				//Children Container
-				& > .hs-menu-children-wrapper {
-					position: relative;
-					
-					//Children
-					& > li > a {
-						@extend %list-item-horizontal-inactive;
-					}
-
-					//Grand Children Container
-					.hs-menu-children-wrapper {
-						position: absolute;
-						z-index: 3;
-						top: 0;
-						left: 100%;
-						
-
-						//Grandchildren
-						& > li > a {
-							@extend %list-item-vertical-inactive;
-						}
-					}
-				}				
-			}
-
-			//Children Hover States
-			a:hover + .hs-menu-children-wrapper,
-			.hs-menu-children-wrapper:hover {
-
-				& > li > a {
-					@extend %list-item-active;
-				}
-			}
-		}
-	}
-}
-
-/*
-//Children Hover States
-a:hover + .hs-menu-children-wrapper,
-.hs-menu-children-wrapper:hover {
-	li {
-		position: relative;
-	}
-
-	& > li > a {
-		@extend %list-item-active;
-	}
-}
-
-
-//Grand Children Hover States
-
-a:hover + .hs-menu-children-wrapper,
-.hs-menu-children-wrapper:hover {
-	
-	& > li > a {
-		@extend %list-item-active;
-	}
-}
-*/
 
 
 

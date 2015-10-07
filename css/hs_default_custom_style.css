@@ -9622,7 +9622,10 @@ blockquote cite:before {
 .km-footer {
   background-color: #b49d92;
   color: #d3c6bf;
-  padding: 52.5px 16px 0;
+}
+/* line 12, ../scss/layout/_footer.scss */
+.km-footer > .row-fluid-wrapper .widget-span {
+  padding: 0 16px;
 }
 /* line 15, ../scss/layout/_footer.scss */
 .km-footer > .row-fluid-wrapper .widget-span .widget-span {
@@ -9648,8 +9651,9 @@ blockquote cite:before {
 /* line 39, ../scss/layout/_footer.scss */
 .km-footer .km-legal {
   text-align: center;
+  background-color: #85695b;
 }
-/* line 44, ../scss/layout/_footer.scss */
+/* line 45, ../scss/layout/_footer.scss */
 .km-footer .km-button, .km-footer .km-btn-primary,
 .km-footer .km-child-btn-primary button,
 .km-child-btn-primary .km-footer button,
@@ -9767,8 +9771,8 @@ blockquote cite:before {
  *----------------------------------------------------------------------------------------------------------------------------
  */
 /* line 9, ../scss/module/_navigation.scss */
-.hs-menu-wrapper ul li a, .hs-menu-flow-vertical.flyouts li.hs-item-has-children a:hover + .hs-menu-children-wrapper > li > a, .hs-menu-flow-vertical.flyouts li.hs-item-has-children > .hs-menu-children-wrapper:hover > li > a, .hs-menu-flow-horizontal.flyouts > ul a:hover + .hs-menu-children-wrapper > li > a,
-.hs-menu-flow-horizontal.flyouts > ul .hs-menu-children-wrapper:hover > li > a {
+.hs-menu-wrapper.flyouts ul li > a, .hs-menu-flow-horizontal.flyouts > ul li.hs-item-has-children a:hover + .hs-menu-children-wrapper > li > a,
+.hs-menu-flow-horizontal.flyouts > ul li.hs-item-has-children .hs-menu-children-wrapper:hover > li > a, .hs-menu-flow-vertical.flyouts li.hs-item-has-children a:hover + .hs-menu-children-wrapper > li > a, .hs-menu-flow-vertical.flyouts li.hs-item-has-children > .hs-menu-children-wrapper:hover > li > a {
   background-color: #EEE;
   border-bottom: solid 1px #DDD;
   padding: 0.4rem 2rem 0.4rem 1rem;
@@ -9781,7 +9785,7 @@ blockquote cite:before {
 }
 
 /* line 21, ../scss/module/_navigation.scss */
-.hs-menu-flow-vertical.flyouts li.hs-item-has-children ul.hs-menu-children-wrapper > li > a, .hs-menu-flow-horizontal.flyouts > ul > .hs-item-has-children > .hs-menu-children-wrapper .hs-menu-children-wrapper > li > a, .hs-menu-flow-horizontal.flyouts > ul > .hs-item-has-children > .hs-menu-children-wrapper > li > a {
+.hs-menu-flow-vertical.flyouts li.hs-item-has-children ul.hs-menu-children-wrapper > li > a, .hs-menu-flow-horizontal.flyouts > ul li ul.hs-menu-children-wrapper li a {
   -moz-transition: max-height 0.5s ease-in-out, max-width 0.5s ease-in-out, padding 0.4s ease-in-out, visibility 0.5s linear 0s;
   -o-transition: max-height 0.5s ease-in-out, max-width 0.5s ease-in-out, padding 0.4s ease-in-out, visibility 0.5s linear 0s;
   -webkit-transition: max-height 0.5s ease-in-out, max-width 0.5s ease-in-out, padding 0.4s ease-in-out, visibility 0.5s linear;
@@ -9791,7 +9795,7 @@ blockquote cite:before {
 }
 
 /* line 26, ../scss/module/_navigation.scss */
-.hs-menu-flow-vertical.flyouts li.hs-item-has-children ul.hs-menu-children-wrapper > li > a, .hs-menu-flow-horizontal.flyouts > ul > .hs-item-has-children > .hs-menu-children-wrapper .hs-menu-children-wrapper > li > a {
+.hs-menu-flow-vertical.flyouts li.hs-item-has-children ul.hs-menu-children-wrapper > li > a {
   max-width: 0;
   border-left: none;
   border-right: none;
@@ -9800,7 +9804,7 @@ blockquote cite:before {
 }
 
 /* line 35, ../scss/module/_navigation.scss */
-.hs-menu-flow-horizontal.flyouts > ul > .hs-item-has-children > .hs-menu-children-wrapper > li > a {
+.hs-menu-flow-horizontal.flyouts > ul li ul.hs-menu-children-wrapper li a {
   max-height: 0;
   border-top: none;
   border-bottom: none;
@@ -9808,40 +9812,79 @@ blockquote cite:before {
   padding-bottom: 0;
 }
 
-/* line 49, ../scss/module/_navigation.scss */
-.hs-menu-wrapper ul {
+/* line 59, ../scss/module/_navigation.scss */
+.hs-menu-wrapper.flyouts ul {
   list-style: none;
   padding: 0 !important;
   margin: 0 !important;
 }
-/* line 54, ../scss/module/_navigation.scss */
-.hs-menu-wrapper ul li {
+/* line 64, ../scss/module/_navigation.scss */
+.hs-menu-wrapper.flyouts ul li {
   position: relative;
   padding: 0 !important;
   margin: 0 !important;
 }
 
-/* line 78, ../scss/module/_navigation.scss */
+/* line 90, ../scss/module/_navigation.scss */
+.hs-menu-flow-horizontal {
+  position: relative;
+  z-index: 100;
+}
+/* line 98, ../scss/module/_navigation.scss */
+.hs-menu-flow-horizontal.flyouts > ul li {
+  float: left;
+}
+/* line 101, ../scss/module/_navigation.scss */
+.hs-menu-flow-horizontal.flyouts > ul li ul.hs-menu-children-wrapper {
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+}
+/* line 106, ../scss/module/_navigation.scss */
+.hs-menu-flow-horizontal.flyouts > ul li ul.hs-menu-children-wrapper li {
+  width: 100%;
+}
+/* line 115, ../scss/module/_navigation.scss */
+.hs-menu-flow-horizontal.flyouts > ul li ul.hs-menu-children-wrapper li.hs-item-has-children ul.hs-menu-children-wrapper {
+  top: 0;
+  left: 100%;
+}
+/* line 120, ../scss/module/_navigation.scss */
+.hs-menu-flow-horizontal.flyouts > ul li ul.hs-menu-children-wrapper li.hs-item-has-children > a:after {
+  font-family: "FontAwesome";
+  content: "\f105";
+  position: absolute;
+  padding-left: 1rem;
+}
+/* line 137, ../scss/module/_navigation.scss */
+.hs-menu-flow-horizontal.flyouts > ul li.hs-item-has-children > a:after {
+  font-family: "FontAwesome";
+  content: "\f107";
+  position: absolute;
+  padding-left: 1rem;
+}
+
+/* line 153, ../scss/module/_navigation.scss */
 .hs-menu-flow-vertical > ul {
   float: left;
 }
-/* line 86, ../scss/module/_navigation.scss */
+/* line 161, ../scss/module/_navigation.scss */
 .hs-menu-flow-vertical.flyouts ul > li:first-of-type > a,
 .hs-menu-flow-vertical.flyouts li.hs-item-has-children ul.hs-menu-children-wrapper > li:first-of-type a {
   border-top: solid 1px #DDD;
 }
-/* line 96, ../scss/module/_navigation.scss */
+/* line 168, ../scss/module/_navigation.scss */
 .hs-menu-flow-vertical.flyouts li.hs-item-has-children {
   position: relative;
 }
-/* line 100, ../scss/module/_navigation.scss */
+/* line 172, ../scss/module/_navigation.scss */
 .hs-menu-flow-vertical.flyouts li.hs-item-has-children > a:after {
   font-family: "FontAwesome";
   content: "\f105";
   position: absolute;
   padding-left: 1rem;
 }
-/* line 105, ../scss/module/_navigation.scss */
+/* line 177, ../scss/module/_navigation.scss */
 .hs-menu-flow-vertical.flyouts li.hs-item-has-children ul.hs-menu-children-wrapper {
   position: absolute;
   z-index: 3;
@@ -9849,70 +9892,10 @@ blockquote cite:before {
   left: 100%;
 }
 
-/* line 138, ../scss/module/_navigation.scss */
-.hs-menu-flow-horizontal {
-  position: relative;
-}
-/* line 142, ../scss/module/_navigation.scss */
-.hs-menu-flow-horizontal > ul {
-  width: 100%;
-  position: absolute;
-}
-/* line 146, ../scss/module/_navigation.scss */
-.hs-menu-flow-horizontal > ul > li {
-  width: auto;
-}
-/* line 156, ../scss/module/_navigation.scss */
-.hs-menu-flow-horizontal.flyouts > ul > .hs-item-has-children {
-  float: left;
-}
-/* line 160, ../scss/module/_navigation.scss */
-.hs-menu-flow-horizontal.flyouts > ul > .hs-item-has-children > a:after {
-  font-family: "FontAwesome";
-  content: "\f107";
-  position: absolute;
-  padding-left: 1rem;
-}
-/* line 165, ../scss/module/_navigation.scss */
-.hs-menu-flow-horizontal.flyouts > ul > .hs-item-has-children > .hs-menu-children-wrapper {
-  position: relative;
-}
-/* line 174, ../scss/module/_navigation.scss */
-.hs-menu-flow-horizontal.flyouts > ul > .hs-item-has-children > .hs-menu-children-wrapper .hs-menu-children-wrapper {
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  left: 100%;
-}
-
-/*
-//Children Hover States
-a:hover + .hs-menu-children-wrapper,
-.hs-menu-children-wrapper:hover {
-	li {
-		position: relative;
-	}
-
-	& > li > a {
-		@extend %list-item-active;
-	}
-}
-
-
-//Grand Children Hover States
-
-a:hover + .hs-menu-children-wrapper,
-.hs-menu-children-wrapper:hover {
-	
-	& > li > a {
-		@extend %list-item-active;
-	}
-}
-*/
 /*
 PRIMARY NAVIGATION
 */
-/* line 250, ../scss/module/_navigation.scss */
+/* line 232, ../scss/module/_navigation.scss */
 .km-nav-primary {
   position: relative;
   background-color: #85695b;
@@ -9922,19 +9905,19 @@ PRIMARY NAVIGATION
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), inset 0 -1px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5), inset 0 -1px 1px rgba(0, 0, 0, 0.2);
 }
-/* line 257, ../scss/module/_navigation.scss */
+/* line 239, ../scss/module/_navigation.scss */
 .km-nav-primary .row, .km-nav-primary .columns {
   position: initial;
 }
-/* line 262, ../scss/module/_navigation.scss */
+/* line 244, ../scss/module/_navigation.scss */
 .km-nav-primary ul {
   list-style-type: none;
 }
-/* line 265, ../scss/module/_navigation.scss */
+/* line 247, ../scss/module/_navigation.scss */
 .km-nav-primary ul li {
   display: inline-block;
 }
-/* line 268, ../scss/module/_navigation.scss */
+/* line 250, ../scss/module/_navigation.scss */
 .km-nav-primary ul li a,
 .km-nav-primary ul li a:hover,
 .km-nav-primary ul li a:visited,
@@ -9947,14 +9930,14 @@ PRIMARY NAVIGATION
   width: 100%;
   max-width: 100%;
 }
-/* line 285, ../scss/module/_navigation.scss */
+/* line 267, ../scss/module/_navigation.scss */
 .km-nav-primary .hs-menu-wrapper > ul {
   overflow: hidden;
   padding: 0 calc( 50% - 555px);
   margin: 0;
   z-index: 5;
 }
-/* line 291, ../scss/module/_navigation.scss */
+/* line 273, ../scss/module/_navigation.scss */
 .km-nav-primary .hs-menu-wrapper > ul > li {
   vertical-align: top;
   line-height: 60px;
@@ -9964,7 +9947,7 @@ PRIMARY NAVIGATION
   float: left;
 }
 @media only screen and (min-width: 48.0625em) {
-  /* line 299, ../scss/module/_navigation.scss */
+  /* line 281, ../scss/module/_navigation.scss */
   .km-nav-primary .hs-menu-wrapper > ul > li > a:hover, .km-nav-primary .hs-menu-wrapper > ul > li > .hs-menu-children-wrapper:hover + a {
     border-bottom: 4px white solid;
     -moz-transition: border 0.3s ease-in-out;
@@ -9973,29 +9956,29 @@ PRIMARY NAVIGATION
     transition: border 0.3s ease-in-out;
   }
 }
-/* line 304, ../scss/module/_navigation.scss */
+/* line 286, ../scss/module/_navigation.scss */
 .km-nav-primary .hs-menu-wrapper > ul > li > a:hover + .hs-menu-children-wrapper,
 .km-nav-primary .hs-menu-wrapper > ul > li .hs-menu-children-wrapper:hover {
   visibility: visible;
   transition-delay: 0s;
   max-height: 300px;
 }
-/* line 312, ../scss/module/_navigation.scss */
+/* line 294, ../scss/module/_navigation.scss */
 .km-nav-primary .hs-menu-wrapper > ul > li.hs-item-has-children > a:after {
   content: '\f107';
   font-family: 'FontAwesome';
   padding-left: 10px;
 }
-/* line 318, ../scss/module/_navigation.scss */
+/* line 300, ../scss/module/_navigation.scss */
 .km-nav-primary .hs-menu-wrapper > ul > li:first-child {
   margin-left: 0;
 }
-/* line 322, ../scss/module/_navigation.scss */
+/* line 304, ../scss/module/_navigation.scss */
 .km-nav-primary .hs-menu-wrapper > ul > li:last-child {
   margin-right: 0;
 }
 @media only screen and (min-width: 48.0625em) {
-  /* line 326, ../scss/module/_navigation.scss */
+  /* line 308, ../scss/module/_navigation.scss */
   .km-nav-primary .hs-menu-wrapper > ul > li.current-menu-item > a {
     border-bottom: 4px white solid;
     -moz-transition: border 0.3s ease-in-out;
@@ -10004,7 +9987,7 @@ PRIMARY NAVIGATION
     transition: border 0.3s ease-in-out;
   }
 }
-/* line 334, ../scss/module/_navigation.scss */
+/* line 316, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper {
   -moz-transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out, visibility 0.5s linear 0s;
   -o-transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out, visibility 0.5s linear 0s;
@@ -10023,7 +10006,7 @@ PRIMARY NAVIGATION
   z-index: 2;
 }
 @media only screen and (min-width: 48.0625em) {
-  /* line 334, ../scss/module/_navigation.scss */
+  /* line 316, ../scss/module/_navigation.scss */
   .km-nav-primary ul.hs-menu-children-wrapper {
     position: absolute;
     right: 0;
@@ -10031,7 +10014,7 @@ PRIMARY NAVIGATION
     top: 100%;
   }
 }
-/* line 354, ../scss/module/_navigation.scss */
+/* line 336, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper li {
   -moz-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
@@ -10043,7 +10026,7 @@ PRIMARY NAVIGATION
   float: left;
   text-align: center;
 }
-/* line 363, ../scss/module/_navigation.scss */
+/* line 345, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper li:hover a {
   -moz-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
@@ -10051,12 +10034,12 @@ PRIMARY NAVIGATION
   transition: background-color 0.3s ease-in-out;
   background-color: #6e97df;
 }
-/* line 369, ../scss/module/_navigation.scss */
+/* line 351, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper li a {
   width: 100%;
   padding: .75em;
 }
-/* line 376, ../scss/module/_navigation.scss */
+/* line 358, ../scss/module/_navigation.scss */
 .km-nav-primary ul.hs-menu-children-wrapper li:last-child {
   border-bottom: none;
 }
