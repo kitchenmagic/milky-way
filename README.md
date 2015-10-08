@@ -27,3 +27,15 @@ If you'd like to upgrade to a newer version of Foundation down the road just run
 ```bash
 bower update
 ```
+
+
+Kitchen Magic
+===
+Commands
+---
+
+<br />
+
+##Git Basics
+* `git config --[local or global] user.name "[name]"` Set username
+* `git config --[local or global] user.email [email address]` Set e-mail address
