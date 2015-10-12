@@ -1,7 +1,7 @@
 Kitchen Magic
 ===
 
-Checkout the [Milky Way project page](http://kitchenmagic.github.io/milky-way/)
+Checkout the <a href="http://kitchenmagic.github.io/milky-way/" class="button">Milky Way project page</a>
 
 Commands
 ---
