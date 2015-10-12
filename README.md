@@ -1,5 +1,8 @@
 Kitchen Magic
 ===
+
+Checkout the [Milky Way project page](http://kitchenmagic.github.io/milky-way/)
+
 Commands
 ---
 
