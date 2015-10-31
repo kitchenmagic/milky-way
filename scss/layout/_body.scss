@@ -4,21 +4,14 @@
  *----------------------------------------------------------------------------------------------------------------------------
  */
 .body-container {
-	margin-top: $global-spacing;
-	
+	margin: $global-spacing auto 0;
+	max-width: $row-width;
 
 	.widget-span {
 		margin-bottom: $global-spacing;
 	}
 
-	& > .row-fluid-wrapper{
-
-		& > .row-fluid {
-			
-			& > .widget-span {
-				//@extend .km-row;
-				padding: 0 16px;
-			}
-		}
+	& > .row-fluid-wrapper > .row-fluid > .widget-span {
+		padding: 0 16px;
 	}
 }
