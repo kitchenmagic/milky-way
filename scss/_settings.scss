@@ -128,15 +128,6 @@ $success-color: 	#799A05;
 $warning-color: 	#F98E2B;
 $info-color: 		#5988DA;
 
-$colors:(
-	primary:		$primary-color,
-	secondary:	$secondary-color,
-	tertiary:		$tertiary-color,
-	alert:		$alert-color,
-	success:		$success-color,
-	warning:		$warning-color,
-	info:		$info-color
-);
 
 
 
@@ -1515,6 +1506,18 @@ $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%);
 
 // -- Kitchen Magic Settings
 // - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$colors:(
+	primary:		$primary-color,
+	secondary:	$secondary-color,
+	tertiary:		$tertiary-color,
+	alert:		$alert-color,
+	success:		$success-color,
+	warning:		$warning-color,
+	info:		$info-color
+);
+
+
 $header-color: $secondary-color;
 $footer-color: $tertiary-color;
 
@@ -1572,5 +1575,8 @@ $list-background-color: #EEE;
 $list-border-style: solid 1px #DDD;
 
 
-
+@mixin align-center{
+	margin-left: auto;
+	margin-right: auto;
+}
 

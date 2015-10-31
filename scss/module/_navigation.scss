@@ -12,10 +12,14 @@
 	padding: 0.4rem 2rem 0.4rem 1rem;
 	max-width: 100%;
 	max-height: 100%;
+	margin-bottom: 1px;
 	display: block;
+	display: inline-table;
 	visibility: visible;
 	overflow: hidden;
 	white-space: nowrap;
+	width: 100%;
+	box-sizing: border-box;
 }
 
 %list-item-inactive {
@@ -102,6 +106,7 @@
 				width: 100%;
 				position:absolute;
 				z-index: 3;
+				display: inline-table;
 
 				li {
 					width:100%;
@@ -128,6 +133,7 @@
 				//Horizontal Items Hover States
 				a:hover + .hs-menu-children-wrapper,
 				.hs-menu-children-wrapper:hover {
+					z-index: 150;
 
 					& > li > a {
 						@extend %list-item-active;
@@ -160,7 +166,7 @@
 
 			&:first-of-type > a,
 			%list-top {
-				border-top: $list-border-style;
+				//border-top: $list-border-style;
 			}			
 		}
 
@@ -185,7 +191,7 @@
 				}
 
 				& > li:first-of-type a {
-					@extend %list-top;
+					@extend %list-top !optional;
 				}
 			}
 			
@@ -195,6 +201,62 @@
 				
 				& > li > a {
 					@extend %list-item-active;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+.km-nav-primary {
+	width: 100%;
+	
+	.km-nav-inner {
+		width: 100%;
+
+		.hs-menu-wrapper > ul {
+			padding: 0 calc(50% - 555px)!important;
+			background-color: $tertiary-color;
+			overflow: hidden;
+
+			& > li {
+				width: 20%;
+				position: static;
+
+				a {
+					background-color: transparent;
+					text-align: center;
+				}
+
+				ul {
+					position: absolute;
+					background-color: $info-color;
+					width: 100%;
+					left: 0;
+					right: 0;
+					top: 100%;
+					padding: 0 calc(50% - 555px)!important;
+
+					li {
+						display: inline-block;
+						float: left;
+						width: 20%;
+
+						& > a{
+							background-color: transparent;
+						}
+					}
+					
+					//Hover States
+					a:hover + .hs-menu-children-wrapper,
+					& > .hs-menu-children-wrapper:hover {
+				
+						& > li > a {
+							background-color: transparent;
+						}
+					}
 				}
 			}
 		}
@@ -221,14 +283,10 @@
 
 
 
-
-
-
-
-
 /*
 PRIMARY NAVIGATION
 */
+/*
 .km-nav-primary {
 	position: relative;
 	background-color: $secondary-color;
@@ -258,6 +316,7 @@ PRIMARY NAVIGATION
 				display: inline-block;
 				width: 100%;
 				max-width: 100%;
+				background-color: transparent;
 			}
 		}
 	}
@@ -321,7 +380,7 @@ PRIMARY NAVIGATION
 		margin: 0;
 		max-height: 0;
 		overflow: hidden;
-		padding: 0 calc( 50% - 555px);/*ssss*/
+		padding: 0 calc( 50% - 555px);
 		visibility: hidden;
 		width: 100%;
 		z-index: 2;
