@@ -1,5 +1,8 @@
 Kitchen Magic
 ===
+
+[Staging Site](southeast.kitchenmagic.com)
+
 Commands
 ---
 
