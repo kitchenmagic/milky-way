@@ -24,7 +24,3 @@ javascripts_dir = "js"
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 
 require 'font-awesome-sass'
-
-group :development do
-  gem 'guard-livereload', '~> 2.4', require: false
-end
