@@ -1,7 +1,7 @@
 Kitchen Magic
 ===
 
-[Staging Site](http://southeast.kitchenmagic.com)
+Check out the [Staging Site](http://southeast.kitchenmagic.com).
 
 Commands
 ---
