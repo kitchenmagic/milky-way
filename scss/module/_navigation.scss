@@ -130,6 +130,7 @@
 			}
 			
 			&.hs-item-has-children {
+				/*
 				//Horizontal Items Hover States
 				a:hover + .hs-menu-children-wrapper,
 				.hs-menu-children-wrapper:hover {
@@ -138,7 +139,7 @@
 					& > li > a {
 						@extend %list-item-active;
 					}
-				}
+				}*/
 
 			 	& > a:after {
 					@include icon($fa-angle-down, right);
@@ -196,6 +197,7 @@
 			}
 			
 			//Hover States
+			/*
 			a:hover + .hs-menu-children-wrapper,
 			& > .hs-menu-children-wrapper:hover {
 				
@@ -203,6 +205,7 @@
 					@extend %list-item-active;
 				}
 			}
+			*/
 		}
 	}
 }
@@ -212,7 +215,13 @@
 
 .km-nav-primary {
 	width: 100%;
-	
+	background-color: $tertiary-color;
+
+	& > div { 
+		
+		width:
+	} 
+	/*
 	.km-nav-inner {
 		width: 100%;
 
@@ -233,11 +242,12 @@
 				ul {
 					position: absolute;
 					background-color: $info-color;
+					background: transparent;
 					width: 100%;
 					left: 0;
 					right: 0;
 					top: 100%;
-					padding: 0 calc(50% - 555px)!important;
+					padding: 0 calc(50% - 555px)!important; 
 
 					li {
 						display: inline-block;
@@ -260,7 +270,7 @@
 				}
 			}
 		}
-	}
+	}*/
 }
 
 

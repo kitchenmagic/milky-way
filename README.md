@@ -1,7 +1,20 @@
-Kitchen Magic
+Kitchen Magic 
 ===
 
-Check out the [Staging Site](http://southeast.kitchenmagic.com).
+[Staging Site](http://southeast.kitchenmagic.com).
+
+##Sass
+---
+* #Variables
+* * Center: 
+* #Mixins
+
+
+
+
+
+
+
 
 Commands
 ---
