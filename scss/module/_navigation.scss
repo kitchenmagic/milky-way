@@ -212,15 +212,56 @@
 
 
 
+.km-nav-primary .hs-menu-wrapper .hs-item-has-children > a:hover + ul 
+
+
 
 .km-nav-primary {
 	width: 100%;
 	background-color: $tertiary-color;
 
-	& > div { 
+	.hs-menu-wrapper { 
+		padding: 0 calc(50% - 555px)!important;
 		
-		width:
-	} 
+		ul li {
+			width: 20%!important;
+		}
+
+		& > ul > li {
+			position: static;
+
+			a {
+				background-color: transparent;
+			}
+
+			& > a {
+				color: $white;
+			}
+		}
+
+		.hs-item-has-children {
+			
+			
+			& > a:hover + ul {
+				background-color: blue;
+				left: 0;
+				right: 0;
+				padding: 0 calc(50% - 555px)!important;
+				
+				& > li > a {
+					background-color: rgba(255,255,255,.5);
+					max-height: auto;
+					height: 50px;
+					color:white;
+    					visibility: visible;
+				}
+			}
+		}
+	}
+	
+
+
+
 	/*
 	.km-nav-inner {
 		width: 100%;

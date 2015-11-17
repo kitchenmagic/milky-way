@@ -3,11 +3,32 @@ Kitchen Magic
 
 [Staging Site](http://southeast.kitchenmagic.com).
 
-##Sass
+## Styling
 ---
-* #Variables
-* * Center: 
-* #Mixins
+- ###Helper Classes
+- 
+
+
+
+## Sass
+---
+- ### Variables
+    + Layout
+    + Color
+        * White: `$white`
+        * Primary: `primary-color`
+        * Secondary: `secondary-color`
+        * Tertiary: `tertiary-color`
+        * Info: `info-color`
+        * Warning: `warning-color`
+        * Alert: `alert-color`
+    + Layout
+        * Row: `$row-width`
+        * 
+    
+- ### Mixins
+    + Alignment
+        + center: `@include align-center;`
 
 
 
@@ -15,8 +36,7 @@ Kitchen Magic
 
 
 
-
-Commands
+# Commands
 ---
 
 <br />
