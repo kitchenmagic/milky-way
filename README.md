@@ -1,27 +1,34 @@
-Kitchen Magic 
-===
+<link rel="stylesheet" href="-https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+#Kitchen Magic
+---
 
 [Staging Site](http://southeast.kitchenmagic.com).
 
 ## Styling
 ---
-- ###Helper Classes
+- Elements
+    + Navigation
+        * Primary Navigation: `.km-nav-primary`
+    + Modules
+        * 
+- Helper Classes
 - 
 
+<button class="btn">This is a button</button>
 
-
-## Sass
+#Sass
 ---
 - ### Variables
     + Layout
     + Color
         * White: `$white`
-        * Primary: `primary-color`
-        * Secondary: `secondary-color`
-        * Tertiary: `tertiary-color`
-        * Info: `info-color`
-        * Warning: `warning-color`
-        * Alert: `alert-color`
+        * Primary: `$primary-color`
+        * Secondary: `$secondary-color`
+        * Tertiary: `$tertiary-color`
+        * Info: `$info-color`
+        * Warning: `$warning-color`
+        * Alert: `$alert-color`
     + Layout
         * Row: `$row-width`
         * 
@@ -29,6 +36,26 @@ Kitchen Magic
 - ### Mixins
     + Alignment
         + center: `@include align-center;`
+
+
+#Icons
+---
+###Library
+- [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
+
+
+#Hubspot
+---
+
+### Modules
+**Primary Navigation**
+- Type: Advanced Menu
+    + Advanced Menu Type: Static
+    + Max Levels: 2
+    + Orientation: Horizontal
+    + Enable Flyouts?: Enable Flyout
+    + Menu: Primary Navigation
+
 
 
 

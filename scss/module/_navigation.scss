@@ -212,19 +212,22 @@
 
 
 
-.km-nav-primary .hs-menu-wrapper .hs-item-has-children > a:hover + ul 
-
-
-
 .km-nav-primary {
 	width: 100%;
-	background-color: $tertiary-color;
+	background-color: $secondary-color;
+	position: relative;
 
 	.hs-menu-wrapper { 
-		padding: 0 calc(50% - 555px)!important;
+		max-width: $row-width;
+		position: static;
+		@include align-center;
 		
-		ul li {
-			width: 20%!important;
+		ul {
+			position:static;
+
+			li {
+				width: 20%!important;
+			}
 		}
 
 		& > ul > li {
@@ -232,6 +235,10 @@
 
 			a {
 				background-color: transparent;
+				line-height: 60px;
+				padding: 0;
+				margin:0;
+				border: none;
 			}
 
 			& > a {
@@ -240,20 +247,39 @@
 		}
 
 		.hs-item-has-children {
-			
-			
-			& > a:hover + ul {
-				background-color: blue;
+			//Hidden State
+			& > ul {
+				top: 60px;
 				left: 0;
 				right: 0;
-				padding: 0 calc(50% - 555px)!important;
+				background-color: $info-color;
+				padding: 0 calc(50% - 570px)!important;
+
+				& > li {
+					display: inline-block;
+
+					& > a {
+						height: 0;
+						font-size: 0;
+						line-height: 0;
+						color:white;
+						display: block;
+					}
+				}
+			}
+			
+			//Visible State
+			& > a:hover + ul,
+			& > ul:hover {
+				z-index: 10;
 				
 				& > li > a {
-					background-color: rgba(255,255,255,.5);
-					max-height: auto;
-					height: 50px;
-					color:white;
-    					visibility: visible;
+					background-color: rgba(255,255,255,.2);
+					max-height: inherit;
+					height: auto;
+					visibility: visible;
+					font-size: 1em;
+					line-height: 2
 				}
 			}
 		}

@@ -18,19 +18,20 @@
 
 
 	@media #{$medium-up}{
-		padding: 10px;
+		//padding: 10px;
 		@include raised;
 	}
 
 	.km-header-inner{
 		max-width: $row-width;
 		@extend .km-row;
+		z-index: 10;
+		position: relative;
 
 		.km-logo{
 			background: $white;
 			text-align: center;
 			padding: 10px;
-				
 
 			@media #{$medium-up} {
 				@include border-radius(0 0 $global-radius $global-radius);
@@ -43,7 +44,7 @@
 			}
 
 			img{
-				width:auto!important;
+				width: auto!important;
 			}
 		}
 
@@ -69,16 +70,60 @@
 		border-color: darken($header-color,7);
 	}
 
+	.km-header-mobile{
+		display: none;
+		background-color: $white;
+
+		.km-toggle{
+			line-height: 61px;
+
+			&.km-toggle-menu {
+			
+			}
+
+			&.km-toggle-search {
+
+			}
+		}
+
+		.km-logo{
+			text-align: center;
+
+			img{
+				width: 69px;
+				margin: 10px 0;
+			}
+		}
+
+		
+
+	}
+
+	@media #{$medium-down}{
+		.km-header-mobile{
+			display: block;
+		}
+
+		.km-header-inner{
+			display:none;
+		}
+	}
+
+
+
 }
 
 .km-banner{
-	height: 180px;
+	max-height: 180px;
 	width: 100%;
+	overflow: hidden;
 
+	img,
 	.km-banner-image {
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: 0 0;
 		height: 100%;
+		width: 100%!important;
 	}
 }
