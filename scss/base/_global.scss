@@ -6,10 +6,22 @@ h1, h2, h3, h4, h5, h6 {
 	padding-top: $header-top-margin;
 }
 
+h1{
+	text-align: center;
+}
+
+h2{
+
+}
 
 blockquote{
 	border:none;
-	text-align:center;
+	text-align: left;
+	background: $white-smoke;
+	border-left: solid 8px $gainsboro;
+background: rgba(0,0,0,0.05);
+    border-left: solid 8px rgba(0,0,0,0.1);
+	padding: 25px 25px 10px;
 
 	cite{
 		text-align: right;

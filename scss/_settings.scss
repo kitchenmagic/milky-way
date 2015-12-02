@@ -131,14 +131,9 @@ $info-color: 		#5988DA;
 
 
 
-
-// Used to set textures
-$grain: url('http://kitchenmagic.wpengine.com/wp-content/themes/kitchen-magic/images/textures/inflicted.png');
-
-
 // We use these to control various global styles
 $body-bg: $white;
-$body-font-color: $jet;
+$body-font-color: $oil;
 $body-font-family: $font-family-sans-serif;
 $body-font-weight: $font-weight-normal;
 $body-font-style: normal;
@@ -226,13 +221,13 @@ $cursor-text-value: text;
 $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-$header-font-family: $body-font-family;
+$header-font-family: $font-family-serif;
 $header-font-weight: $font-weight-normal;
 $header-font-style: normal;
-$header-font-color: $jet;
+$header-font-color: $charcoal;
 $header-line-height: 1.4;
 $header-top-margin: .2rem;
-$header-bottom-margin: .5rem;
+$header-bottom-margin: 1rem;
 $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
@@ -284,10 +279,10 @@ $paragraph-text-rendering: optimizeLegibility;
 // $code-padding: rem-calc(2) rem-calc(5) rem-calc(1);
 
 // We use these to style anchors
-// $anchor-text-decoration: none;
-// $anchor-text-decoration-hover: none;
-// $anchor-font-color: $primary-color;
-// $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
+ $anchor-text-decoration: none;
+ $anchor-text-decoration-hover: none;
+ $anchor-font-color: $info-color;
+ $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
@@ -1522,6 +1517,9 @@ $colors:(
 
 $header-color: $secondary-color;
 $footer-color: $tertiary-color;
+
+// Used to set textures
+$grain: url('http://kitchenmagic.wpengine.com/wp-content/themes/kitchen-magic/images/textures/inflicted.png');
 
 //Layout
 $width-tenth: 10%;

@@ -215,9 +215,10 @@
 .km-nav-primary.km-navigation {
 	width: 100%;
 	background-color: $secondary-color;
+	background-image: $grain;
 	position: relative;
 	height: 60px;
-
+	@include raised;
 
 	.hs-menu-wrapper { 
 		max-width: $row-width;
