@@ -7,13 +7,13 @@
 .km-icon{
 	margin: 0 .2em;
 	
-	@extend .fa;
-
-	&:before{
-
-	}
+	@extend .fa!optional;
 }
 
 .km-icon-menu{
-	@extend .fa-bars;
+	@extend .fa-bars!optional;
+}
+
+.km-icon-search{
+	@extend .fa-search!optional;
 }

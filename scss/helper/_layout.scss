@@ -29,6 +29,14 @@
 }
 
 
+.km-wrapper{
+	@extend .km-row;
+}
+
+.km-wrapper-inner{
+	@extend .km-row;
+}
+
 .km-width-full{
 	width:$width-full;
 	max-width:$width-full;

@@ -16,8 +16,7 @@
  */
 
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
-@import "font-awesome-sprockets";
-@import "font-awesome";
+
 
 /*
  *
@@ -39,7 +38,7 @@
 	@import "settings";
 	
 	// To include all of Foundation
-	@import "foundation"; 
+	//@import "foundation"; 
 
 	// Or selectively include components
 	//@import "foundation/components/accordion";
@@ -73,10 +72,10 @@
 	//@import "foundation/components/tabs";
 	//@import "foundation/components/thumbs";
 	//@import "foundation/components/tooltips";
-	//@import "foundation/components/top-bar";
+	@import "foundation/components/top-bar";
 	@import "foundation/components/type";
 	//@import "foundation/components/offcanvas";
-	//@import "foundation/components/visibility";
+	@import "foundation/components/visibility";
 
 
 /*
@@ -94,7 +93,11 @@
  *
  *
  */
+ 	//Font Awesome
+	@import "font-awesome-sprockets";
+	@import "font-awesome";
 
+	//Kitchen Magic
 	@import "utility/utility";
 	@import "compass/css3";
 	@import "base/global";

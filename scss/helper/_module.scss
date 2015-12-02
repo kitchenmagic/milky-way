@@ -19,3 +19,40 @@
 .km-form-hide-label label {
 	display:none!important;
 }
+
+#blackout {
+    z-index: 100000;
+    background-color: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+
+.km-button-inline {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	float: right;
+
+	.hs-input{
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding-right: 40%;
+		right: 0;
+	}
+
+	.hs-button,
+	.km-button {
+		position: absolute;
+		margin: 0;
+		top: 0;
+		right: 0;
+		border-top-left-radius: 1px;
+		border-bottom-left-radius: 1px;
+	}
+}

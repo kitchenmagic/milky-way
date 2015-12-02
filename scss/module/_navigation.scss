@@ -4,11 +4,9 @@
  *----------------------------------------------------------------------------------------------------------------------------
  */
 
-
-
 %list-item-active {
 	background-color: $list-background-color;
-	border-bottom: $list-border-style;
+	//border-bottom: $list-border-style;
 	padding: 0.4rem 2rem 0.4rem 1rem;
 	max-width: 100%;
 	max-height: 100%;
@@ -129,6 +127,7 @@
 				}
 			}
 			
+			//Hover State
 			&.hs-item-has-children {
 				/*
 				//Horizontal Items Hover States
@@ -160,7 +159,8 @@
 	& > ul {
 		float:left;
 	}
-
+	
+	//With Flyouts
 	&.flyouts {
 		
 		& ul > li {
@@ -212,37 +212,32 @@
 
 
 
-.km-nav-primary {
+.km-nav-primary.km-navigation {
 	width: 100%;
 	background-color: $secondary-color;
 	position: relative;
+	height: 60px;
+
 
 	.hs-menu-wrapper { 
 		max-width: $row-width;
 		position: static;
 		@include align-center;
-		
+
 		ul {
 			position:static;
 
-			li {
+			& > li {
 				width: 20%!important;
-			}
-		}
+				position: static;
 
-		& > ul > li {
-			position: static;
-
-			a {
-				background-color: transparent;
-				line-height: 60px;
-				padding: 0;
-				margin:0;
-				border: none;
-			}
-
-			& > a {
-				color: $white;
+				a{
+					padding: 0;
+					margin: 0;
+					line-height: 60px;
+					background-color: transparent;
+					color: $white;
+				}
 			}
 		}
 
@@ -272,23 +267,83 @@
 			& > a:hover + ul,
 			& > ul:hover {
 				z-index: 10;
-				
+				@include transition(all, .3s, ease-in-out);
+
 				& > li > a {
-					background-color: rgba(255,255,255,.2);
+					//background-color: rgba(255,255,255,.2);
 					max-height: inherit;
 					height: auto;
 					visibility: visible;
 					font-size: 1em;
-					line-height: 2
+					line-height: 60px;
+					@include transition(all, .3s, ease-in-out);
 				}
 			}
 		}
+	}	
+}
+
+@media #{$medium-down}{
+	.km-nav-mobile[data-widget-type="menu"]{
+
 	}
-	
+}
 
 
 
-	/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+@media #{$medium-down}{
+	position: fixed;
+	width: 10em;
+	overflow: scroll;
+	left: 0em;
+	top: 0;
+	bottom:0;
+	z-index: 10000;
+}
+
+@media #{$medium-down}{
+	& > a:after {
+		right: 1em;
+	}
+}
+
+@media #{$medium-down}{
+
+	& > a {
+		border-bottom: solid 1px darken($tertiary-color, 2);
+		border-top: solid 1px lighten($tertiary-color, 2);
+	}
+}
+
+@media #{$medium-up}{
+	border: none;
+}
+
+@media #{$medium-down}{
+	width: 100%;
+}
+
 	.km-nav-inner {
 		width: 100%;
 
@@ -338,17 +393,6 @@
 			}
 		}
 	}*/
-}
-
-
-
-
-
-
-
-
-
-
 
 
 

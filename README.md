@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="-https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-
 #Kitchen Magic
 ---
 
@@ -13,9 +11,10 @@
     + Modules
         * 
 - Helper Classes
-- 
+  + Button in form field `km-button-inline'
 
 <button class="btn">This is a button</button>
+
 
 #Sass
 ---
@@ -41,7 +40,16 @@
 #Icons
 ---
 ###Library
-- [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
+[Font Awesome](https://fortawesome.github.io/Font-Awesome/)
+`<i class="km-icon [icon class]"></i>`
+
+###Icon Classes
+- Menu: `km-icon-menu`
+- Search: `km-icon-search`
+
+
+#Info
+Blackout z-index = 100,000
 
 
 #Hubspot

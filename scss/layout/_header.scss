@@ -4,42 +4,161 @@
  *----------------------------------------------------------------------------------------------------------------------------
  */
 
-.km-header{
-	
-	background:{
-		color: $header-color;
-		image: $grain;
+
+
+.top-bar {
+	height: auto;
+	padding: 15px;
+	z-index: 1000;
+}
+
+
+.km-logo-wrapper {
+	display: inline-block;
+
+	.km-logo{
+		@include border-radius(0 0 $global-radius $global-radius);
+		@include box-shadow( 0 1px 10px 0 rgba(0,0,0,.5) );
+		background-color: $white;
+		left: 0;
+		margin-left: 0;
+		margin-right: 0;
+		padding: 15px 25px 20px;
+		position: absolute;
+		right: 0;
+		top: -15px;
+		width: 100%;
+
+		@media #{$large-up} {
+			//margin-top: -80px;				
+			//top: 70px;
+		}
+
+		img{
+			width: 100%;	
+		}
+
+	}
+}
+
+
+.km-contact-wrapper{
+	text-align:center;
+
+	.km-contact-header{
+		color: $white;
+		font-size: 1.7em;
+		line-height: 1.2;
+		padding: 0 0 .4rem;
 	}
 
+	.km-contact-sub-header{
+		color: lighten($tertiary-color, .2 );
+		font-size: 1em;
+		line-height: 1;
+		padding:0;
+	}
+}
+
+
+
+
+
+
+
+.km-banner{
+	max-height: 240px;
+	width: 100%;
+	overflow: hidden;
+
+	img,
+	.km-banner-image {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		height: 100%;
+		width: 100%!important;
+	}
+}
+
+
+
+.km-nav-mobile-wrapper {
+	position: fixed;
+	z-index: 100001;
+	background: #85695b;
+	color: white;
+	top: 0;
+	bottom: 0;
+	left:-50%;
+	overflow:scroll;
+	width: 50%!important;
+
+	a{
+		color:white;
+		padding: .7em 1.5em;
+		display:block;
+		font-size: 1.1em;
+		border-bottom: solid 1px rgba(255,255,255,.2);
+	}
+
+	ul{
+		list-style:none;
+		padding:0;
+		margin:0;
+		width: 100%;
+
+		li{ 
+			width: inherit;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+/*
+
+TO DELETE
+old header styling
+
+
+
+
+.km-headers {
 	width: 100%;
 	display:block;
 	z-index: 1000;
 	position: relative;
 
-
-	@media #{$medium-up}{
-		//padding: 10px;
+	.top-bar{
 		@include raised;
-	}
-
-	.km-header-inner{
-		max-width: $row-width;
-		@extend .km-row;
+		background-color: $header-color;
+		background-image: $grain;
+		color: $topbar-text-color;
+		list-style: none;
+		position: absolute;
 		z-index: 10;
-		position: relative;
 
-		.km-logo{
+		.km-logo {
+			@include border-radius(0 0 $global-radius $global-radius);
+			@include box-shadow( 0 1px 10px 0 rgba(0,0,0,.5) );			
 			background: $white;
-			text-align: center;
+			border-top: 0;
+			border: solid 1px #C5C5C5;
+			margin-left:0;
+			margin-right:0;
 			padding: 10px;
+			position: relative;
+			text-align: center;
+			z-index: 100;
 
-			@media #{$medium-up} {
-				@include border-radius(0 0 $global-radius $global-radius);
-				@include box-shadow( 0 1px 10px 0 rgba(0,0,0,.5) );
-				border: solid 1px #C5C5C5;
-				border-top: 0;
-				margin-top: -80px;
-				position: relative;
+			@media #{$large-up} {
+				margin-top: -80px;				
 				top: 70px;
 			}
 
@@ -51,6 +170,7 @@
 		.km-header-info{
 			margin-top: 8px;
 			color: lighten($header-color,30);
+			line-height: 1.5;
 
 			strong{
 				color: $white;
@@ -69,61 +189,7 @@
 	#{text-inputs(all, 'input')}{
 		border-color: darken($header-color,7);
 	}
-
-	.km-header-mobile{
-		display: none;
-		background-color: $white;
-
-		.km-toggle{
-			line-height: 61px;
-
-			&.km-toggle-menu {
-			
-			}
-
-			&.km-toggle-search {
-
-			}
-		}
-
-		.km-logo{
-			text-align: center;
-
-			img{
-				width: 69px;
-				margin: 10px 0;
-			}
-		}
-
-		
-
-	}
-
-	@media #{$medium-down}{
-		.km-header-mobile{
-			display: block;
-		}
-
-		.km-header-inner{
-			display:none;
-		}
-	}
-
-
-
 }
 
-.km-banner{
-	max-height: 180px;
-	width: 100%;
-	overflow: hidden;
 
-	img,
-	.km-banner-image {
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: 0 0;
-		height: 100%;
-		width: 100%!important;
-	}
-}
+*/
