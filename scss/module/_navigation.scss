@@ -212,13 +212,22 @@
 
 
 
+
+
+
+
+.hs-menu-children-wrapper:hover ~ a{
+	background: $grain lighten($secondary-color, 5 );
+}
+
 .km-nav-primary.km-navigation {
 	width: 100%;
 	background-color: $secondary-color;
 	background-image: $grain;
 	position: relative;
 	height: 60px;
-	@include raised;
+	@include raised($secondary-color);
+	
 
 	.hs-menu-wrapper { 
 		max-width: $row-width;
@@ -233,53 +242,83 @@
 				position: static;
 
 				a{
-					padding: 0;
+					padding: 0 1em;
 					margin: 0;
 					line-height: 60px;
-					background-color: transparent;
+					background: none;
 					color: $white;
+					text-align: center;
+					@include transition(background 0.4s ease-in-out);
+					letter-spacing: 1.2px;
 				}
 			}
 		}
 
+		
+		//First Level
+		& > ul > li > a {
+			@include inset-text($secondary-color);
+
+			&:hover,
+			ul:hover + a {
+				background: $grain lighten($secondary-color, 5 );
+				@include box-shadow(inset 0 -3px $white);
+			}
+		}
+		
+
+		//Second Level
 		.hs-item-has-children {
-			//Hidden State
+			//Default State (Hidden)
 			& > ul {
-				top: 60px;
-				left: 0;
-				right: 0;
+				@include transition(max-height 1s ease-in-out, visibility 1s linear 0s );
+				@include transition-delay(0);
 				background-color: $info-color;
+				border-bottom: solid 1px darken($info-color, 10);
+				display: block;
+				left: 0;
+				max-height: 0;
+				overflow: hidden;
 				padding: 0 calc(50% - 570px)!important;
+				right: 0;
+				top: 60px;
+				visibility: hidden;
 
 				& > li {
 					display: inline-block;
 
 					& > a {
-						height: 0;
-						font-size: 0;
-						line-height: 0;
+						transition: color 0.4s ease-in-out;
+						font-size: 1em;
+						line-height: 60px;
+						max-height: initial;
+						visibility: visible;
 						color:white;
 						display: block;
+						background: $info-color;
+
+						@include inset-text($info-color);
+
+						&:after{
+							@include icon($fa-angle-right, right);
+						}
+						&:hover{
+							background: lighten($info-color, 2);
+						}
 					}
 				}
 			}
 			
-			//Visible State
+			
+			
+			//Hover State (Visible)
 			& > a:hover + ul,
 			& > ul:hover {
-				z-index: 10;
-				@include transition(all, .3s, ease-in-out);
-
-				& > li > a {
-					//background-color: rgba(255,255,255,.2);
-					max-height: inherit;
-					height: auto;
-					visibility: visible;
-					font-size: 1em;
-					line-height: 60px;
-					@include transition(all, .3s, ease-in-out);
-				}
+				z-index: 10;//Bring active menu to top
+				visibility: visible;
+				max-height: 300px;
 			}
+
 		}
 	}	
 }

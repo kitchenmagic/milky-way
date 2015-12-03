@@ -10,8 +10,18 @@
  * Mixins
  *----------------------------------------------------------
  */
-@mixin raised(){
-	@include box-shadow( 0 1px 1px rgba(0,0,0, .5), inset 0 -1px 1px rgba(0,0,0, 0.2) );
+@mixin raised($background-color:null){
+	@if $background-color == null{
+		@include box-shadow( 0 1px 1px rgba(0,0,0, .5), inset 0 -1px 1px rgba(0,0,0, 0.2) );	
+	}@else{
+		@include box-shadow(0 0px 3px rgba(0,0,0,.6), inset 0 -1px 1px darken($background-color, 30 ), inset 0 0px 1px lighten($background-color, 50 ));
+		//border-bottom: solid 1px darken($background-color, 5);
+	}
+	//@include box-shadow(0 0px 1px rgba(0,0,0, .6), inset 0 -1px 1px rgba(0, 0, 0, 0.5), inset 0 0px 1px rgba(255,255,255, .5));
+}
+
+@mixin inset-text($background-color){
+	@include text-shadow( 0 -1px darken($background-color, 40));
 }
 
 @mixin highlighted-item() {

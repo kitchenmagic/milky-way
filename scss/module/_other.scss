@@ -109,3 +109,111 @@
 		width:100%;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+//Google Custom Search
+//Search Results
+.gsc-control-cse {
+	background:none!important;
+	border:none!important;
+
+	*{
+		box-sizing:initial;
+		line-height: normal;
+	}
+
+	table {
+		border: none;
+		padding-top:0;
+		padding-bottom:0;
+		margin-top: 0;
+		margin-bottom:0;
+
+		td{
+			padding: 0;
+			margin: 0;
+		}
+	}
+	
+	.gs-visibleUrl,
+	.gcsc-branding {
+		display: none!important;
+	}
+
+	.gsc-selected-option{
+		line-height: 27px;
+	}
+}
+
+
+
+//Google Search Box
+.gsc-search-box  {
+	* {
+		box-sizing: initial;
+		line-height: normal;
+	}
+
+	table{
+		border: none;
+		background: none;
+		margin: 0!important;
+		padding: 0!important;
+		
+		td{
+			padding:0;
+			margin: 0;
+			line-height: initial;
+		}
+	}
+
+	input {
+		position:static;
+		background-image: none!important;
+		line-height: 2;
+	}
+
+	.gsc-input {
+		padding-right:0!important;
+
+		.gsc-input-box{
+			@include border-radius(3px 0 0 3px);
+			height:33px!important;
+
+			input{
+				padding-left: 13px!important;
+			}
+		}
+	}
+
+	.gsib_b {
+		display:none!important;
+	}
+	
+	.gsc-search-button {
+		margin-left: 0!important;
+
+		input{
+			@include border-radius(0 3px 3px 0);
+			height: 13px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
+
+}
+
+
+//Google Search Ads Removal
+div[class*="gsc-adBlock"]{
+	display:none!important;
+}
