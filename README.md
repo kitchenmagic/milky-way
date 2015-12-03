@@ -64,6 +64,8 @@ Blackout z-index = 100,000
     + Enable Flyouts?: Enable Flyout
     + Menu: Primary Navigation
 
+# jQuery Mobile
+- [Panel Documentation](http://api.jquerymobile.com/panel/)
 
 
 

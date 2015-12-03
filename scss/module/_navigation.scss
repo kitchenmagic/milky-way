@@ -294,6 +294,7 @@
 						max-height: initial;
 						visibility: visible;
 						color:white;
+						position: relative;
 						display: block;
 						background: $info-color;
 
@@ -301,6 +302,8 @@
 
 						&:after{
 							@include icon($fa-angle-right, right);
+							    padding: 0 .5rem 0 .7rem;
+    							right: 0;
 						}
 						&:hover{
 							background: lighten($info-color, 2);
