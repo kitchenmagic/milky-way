@@ -9,9 +9,25 @@
 .top-bar {
 	background-image: $grain;
 	@include raised;
-	height: auto;
-	padding: 15px;
+	height: 60px;
 	z-index: 1000;
+	overflow: visible;
+
+
+	@media #{$large-up}{
+		padding: 15px;
+		height: auto;
+	}
+
+	.km-toggle{
+		color: $white;
+		line-height: 60px;
+
+		&:last-of-type{
+			text-align: right;
+		}
+	}
+
 }
 
 
@@ -27,15 +43,15 @@
 		left: 0;
 		margin-left: 0;
 		margin-right: 0;
-		padding: 15px 25px 20px;
+		padding: 10px 25px 10px;
 		position: absolute;
 		right: 0;
-		top: -15px;
+		top: 0;
 		width: 100%;
 
 		@media #{$large-up} {
-			//margin-top: -80px;				
-			//top: 70px;
+			top: -15px;
+			padding: 15px 25px 20px;
 		}
 
 		img{
@@ -71,21 +87,27 @@
 
 
 .km-banner{
-	max-height: 240px;
+	max-height: 140px;
 	width: 100%;
 	overflow: hidden;
-
+	background-position: center;
+	background-size:cover;
+	
+	@media #{$medium-up}{
+		max-height: 240px;	
+	}
+	
 	img,
 	.km-banner-image {
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-position: 0 0;
+		background-position: center 0;
 		height: 100%;
 		width: 100%!important;
 	}
 }
 
-
+/*
 
 .km-nav-mobile-wrapper {
 	position: fixed;
@@ -125,7 +147,7 @@
 
 
 
-/*
+
 
 TO DELETE
 old header styling

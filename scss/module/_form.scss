@@ -27,7 +27,6 @@ form {
 		input {
 			height: auto;
 			padding: $button-sml 1em;
-			display:mamroud;
 		}
 	}
 	
@@ -72,4 +71,22 @@ form {
 	.hs-error-msgs {
 		display: none!important;
 	}
+}
+
+
+// Placeholder Text
+::-webkit-input-placeholder {
+	color: #888;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	color: #888;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	color: #888; 
+}
+
+:-ms-input-placeholder {  
+	color: #888;
 }

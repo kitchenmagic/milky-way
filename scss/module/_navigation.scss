@@ -227,7 +227,10 @@
 	position: relative;
 	height: 60px;
 	@include raised($secondary-color);
-	
+
+	& > span{
+		position:relative;
+	}	
 
 	.hs-menu-wrapper { 
 		max-width: $row-width;
@@ -235,7 +238,7 @@
 		@include align-center;
 
 		ul {
-			position:static;
+			
 
 			& > li {
 				width: 20%!important;
@@ -300,11 +303,11 @@
 
 						@include inset-text($info-color);
 
-						&:after{
+						/*&:after{
 							@include icon($fa-angle-right, right);
 							    padding: 0 .5rem 0 .7rem;
     							right: 0;
-						}
+						}*/
 						&:hover{
 							background: lighten($info-color, 2);
 						}
